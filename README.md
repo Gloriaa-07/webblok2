@@ -57,24 +57,22 @@ Wondr
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Tijdens de les heb ik de screenreader van Wondr getest op hun toegankelijkheid. hier zal ik mijn bevindingen benoemen. 
-Voordelen: duidelijke navigatie
-Nadelen: geen alt tekst bij foto's
-De lettertype was niet al te klein en dus makkelijk te lezen en ook qua content was het makkelijk te volgen
-
-
-De screen reader beschreef niet wat er in de  video en foto’s gebeurde. 
-heeft het alleen een light mode. 
-De screenreader is via de tab te navigeren over de website heen, dus een muis is niet altijd nodig
-Qua contrast voor slechtziende had wondr geen problemen en voldeed de achtergrond kleur met de tekst goed aan de eisen. 
-Niet alle buttons hadden een naam of alleen bij de desktop versie 
-Er staat tekst in de afbeeldingen die niet wordt voorgelezen
-het was niet mogelijk om de video en de carrousel op pauze te zetten 
+ Tijdens de les heb ik de screenreader van Wondr getest op hun toegankelijkheid. hier zal ik mijn bevindingen benoemen. 
+Voordelen: 
+- duidelijke navigatie
+- De lettertype was niet al te klein en dus makkelijk te lezen en ook qua content was het makkelijk te volgen
+Nadelen: 
+- geen alt tekst bij foto's
+- De screen reader beschreef niet wat er in de  video en foto’s gebeurde. 
+- heeft het alleen een light mode. 
+- De screenreader is via de tab te navigeren over de website heen, dus een muis is niet altijd nodig
+- Qua contrast voor slechtziende had wondr geen problemen en voldeed de achtergrond kleur met de tekst goed aan de eisen. 
+- Niet alle buttons hadden een naam of alleen bij de desktop versie 
+- Er staat tekst in de afbeeldingen die niet wordt voorgelezen
+- het was niet mogelijk om de video en de carrousel op pauze te zetten 
 
 Al om al heeft de website dus veel verbeteringen nodig om de toegankelijkheid te verbeteren.
 
-
-De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke tags ik moest gebruiken maar langzaam begin ik het weer te begrijpen. De breakdown schets heeft hierbij ook erg geholpen. Daarnaast vond ik het lastig om de juiste elementen aan te roepen bij css. Ik dreef het vaak te algemeen waardoor andere dingen ook werden veranderd. Nu probeer ik meer gebruik te maken van nth.first of child. Ik heb ge probeert een menu te maken met JavaScript, maar dat is nog niet gelukt. 
 </details>
 
 
@@ -85,10 +83,10 @@ De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke ta
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="./readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="../readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="./readme-images/2breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="../readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -102,8 +100,8 @@ De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke ta
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke tags ik moest gebruiken maar langzaam begin ik het weer te begrijpen. De breakdown schets heeft hierbij ook erg geholpen. Daarnaast vond ik het lastig om de juiste elementen aan te roepen bij css. Ik dreef het vaak te algemeen waardoor andere dingen ook werden veranderd. Nu probeer ik meer gebruik te maken van nth.first of child. Ik heb ge probeert een menu te maken met JavaScript, maar dat is nog niet gelukt. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -114,9 +112,9 @@ De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke ta
   Manon
  vraag over dingen aanroepen met css (length of type)
   Rosa
--
+vraag over javascript 
   Bob
-  animaties verwerken 
+  vraag over animaties verwerken 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
