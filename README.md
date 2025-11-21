@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw
 
   #### Je focus:
-  surface plane
+  responsive 
  
 </details>
 
@@ -36,16 +36,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  letterboxd
-  https://letterboxd.com
+Wondr
+https://wondrexperience.com/ams/wondr-experience/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  letterboxd  
-  <img src="ss1_letterboxd.png" width="375px" alt="omschrijving van de pagina">
+Wondr
+  <img src="./readme-images/ wondr_homepage.png" width="375px" alt="schermafbeelding homepage website Wondr experience">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-letterboxd 
-  <img src="ss2_letterboxd.png" width="375px" alt="omschrijving van de pagina">
+
+  <img src="./readme-images/wondr_bedrijfsevenenmenten.png" width="375px" alt="schermafbeedling bedrijfsevenementen website Wondr experiece">
  
 </details>
 
@@ -57,8 +57,24 @@ letterboxd
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Tijdens de les heb ik de screenreader van Wondr getest op hun toegankelijkheid. hier zal ik mijn bevindingen benoemen. 
+Voordelen: duidelijke navigatie
+Nadelen: geen alt tekst bij foto's
+De lettertype was niet al te klein en dus makkelijk te lezen en ook qua content was het makkelijk te volgen
 
+
+De screen reader beschreef niet wat er in de  video en foto’s gebeurde. 
+heeft het alleen een light mode. 
+De screenreader is via de tab te navigeren over de website heen, dus een muis is niet altijd nodig
+Qua contrast voor slechtziende had wondr geen problemen en voldeed de achtergrond kleur met de tekst goed aan de eisen. 
+Niet alle buttons hadden een naam of alleen bij de desktop versie 
+Er staat tekst in de afbeeldingen die niet wordt voorgelezen
+het was niet mogelijk om de video en de carrousel op pauze te zetten 
+
+Al om al heeft de website dus veel verbeteringen nodig om de toegankelijkheid te verbeteren.
+
+
+De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke tags ik moest gebruiken maar langzaam begin ik het weer te begrijpen. De breakdown schets heeft hierbij ook erg geholpen. Daarnaast vond ik het lastig om de juiste elementen aan te roepen bij css. Ik dreef het vaak te algemeen waardoor andere dingen ook werden veranderd. Nu probeer ik meer gebruik te maken van nth.first of child. Ik heb ge probeert een menu te maken met JavaScript, maar dat is nog niet gelukt. 
 </details>
 
 
@@ -69,13 +85,10 @@ letterboxd
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="./readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="./readme-images/2breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -95,13 +108,15 @@ letterboxd
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
+  Gloria   
+ ik heb een vraag over mijn menu en over dingen aanroepenmet css (bijv  root of @media) 
+  
+  Manon
+ vraag over dingen aanroepen met css (length of type)
+  Rosa
+-
+  Bob
+  animaties verwerken 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 

@@ -1,0 +1,138 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+@font-face {
+    font-family: archia-bold;
+    src: url(../fonts/archia-bold.otf);
+}
+@font-face {
+    font-family: archia-regular;
+    src: url(../fonts/archia-regular.otf);
+}
+@font-face {
+    font-family: chaney-extended;
+    src: url(../fonts/chaney-extended.otf);
+}
+@font-face {
+    font-family: chaney-extended;
+    src: url(../fonts/chaney-extended.otf);
+}
+@font-face {
+    font-family: chaney-wide;
+    src: url(../fonts/chaney-wide.otf);
+}
+@font-face {
+    font-family: fa-brands;
+    src: url(../fonts/fa-brands-400.woff2);
+}
+@font-face {
+    font-family: parking-regular;
+    src: url(../fonts/parking-regular.otf);
+}
+*, *::after, *::before {
+  box-sizing:border-box;  
+  margin: 0;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+header{
+	background-color: #ff2eb0;
+	height: 5em;
+	display:flex;
+justify-content:space-between;
+  align-items: center;
+  position:sticky;
+  top:0;
+}   
+header img{
+	width: 9.38em;
+	height: 3.4em;
+	padding-top: 1em;
+	padding-top: 1em;
+}
+header button img{
+	width: 3em;
+}
+header button{
+	order:1;
+	z-index:1;
+	position:relative;
+}
+/* nav button{
+
+} */
+/* nav ul{
+	position: sticky;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  translate:-100% 0;
+  transition:1s;
+}
+nav li{
+	flex-basis:0;
+    flex-grow:0;
+} */
+footer{
+	background-color: #ff2eb0;
+}
+/* nav button{
+	display: none;
+} */
+footer img{
+	width: 9.38em;
+	height: 3.4em;
+	padding-top: 1em;
+	padding-top: 1em;
+}
+/* nav ul{
+	position:static;
+	translate: 0 0;
+	padding:0;
+	background: none;
+} */
+ 
+/* nav.is-open ul {
+	translate: 0 0;
+  } */
+  
+/* nav li{
+	flex-grow: 0;
+	flex-basis: 0;
+} */
+
+/* nav a {
+	border: none;
+	flex-direction: column;
+} */
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+	color-scheme: light dark;
+}
+ 
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;}
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+

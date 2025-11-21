@@ -1,0 +1,21 @@
+section video{
+    width: 100%;
+  height: auto;
+}
+ul li img{
+width: 15em;
+}
+section:nth-of-type(5) img{
+    width: 20em;
+}
+section:nth-of-type(3) img{
+    display: flex;
+    overflow-x:auto;
+    flex-shrink:0;
+    /* flex-grow: 1;
+    flex-direction: column;
+    scroll-snap-align: center; */
+}
+section:nth-of-type(1) img{
+    width: 7em;
+}
