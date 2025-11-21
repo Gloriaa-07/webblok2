@@ -58,10 +58,14 @@ Wondr
 
   ### Bevindingen
  Tijdens de les heb ik de screenreader van Wondr getest op hun toegankelijkheid. hier zal ik mijn bevindingen benoemen. 
+
 Voordelen: 
+
 - duidelijke navigatie
 - De lettertype was niet al te klein en dus makkelijk te lezen en ook qua content was het makkelijk te volgen
+
 Nadelen: 
+
 - geen alt tekst bij foto's
 - De screen reader beschreef niet wat er in de  video en foto’s gebeurde. 
 - heeft het alleen een light mode. 
@@ -83,10 +87,10 @@ Al om al heeft de website dus veel verbeteringen nodig om de toegankelijkheid te
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="../readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="./readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="../readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="./readme-images/breakdown-schets-gloria-daniël.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -107,7 +111,7 @@ De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke ta
   samen met je groepje opstellen
 
   Gloria   
- ik heb een vraag over mijn menu en over dingen aanroepenmet css (bijv  root of @media) 
+ ik heb een vraag over mijn menu en over dingen aanroepen met css (bijv  root of @media) 
   
   Manon
  vraag over dingen aanroepen met css (length of type)
