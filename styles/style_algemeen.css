@@ -1,124 +1,15 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-@font-face {
-    font-family: archia-bold;
-    src: url(../fonts/archia-bold.otf);
-}
-@font-face {
-    font-family: archia-regular;
-    src: url(../fonts/archia-regular.otf);
-}
-@font-face {
-    font-family: chaney-extended;
-    src: url(../fonts/chaney-extended.otf);
-}
-@font-face {
-    font-family: chaney-extended;
-    src: url(../fonts/chaney-extended.otf);
-}
-@font-face {
-    font-family: chaney-wide;
-    src: url(../fonts/chaney-wide.otf);
-}
-@font-face {
-    font-family: fa-brands;
-    src: url(../fonts/fa-brands-400.woff2);
-}
-@font-face {
-    font-family: parking-regular;
-    src: url(../fonts/parking-regular.otf);
-}
-*, *::after, *::before {
-  box-sizing:border-box;  
-  margin: 0;
-}
-html{
-	scroll-behavior: smooth;
-}
 
-header{
-	background-color: #ff2eb0;
-	height: 5em;
-	display:flex;
-justify-content:space-between;
-  align-items: center;
-  position:sticky;
-  top:0;
-}   
-header img{
-	width: 9.38em;
-	height: 3.4em;
-	padding-top: 1em;
-	padding-top: 1em;
-}
-header button img{
-	width: 3em;
-}
-header button{
-	order:1;
-	z-index:1;
-	position:relative;
-}
-/* nav button{
-
-} */
-/* nav ul{
-	position: sticky;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  translate:-100% 0;
-  transition:1s;
-}
-nav li{
-	flex-basis:0;
-    flex-grow:0;
-} */
-footer{
-	background-color: #ff2eb0;
-}
-/* nav button{
-	display: none;
-} */
-footer img{
-	width: 9.38em;
-	height: 3.4em;
-	padding-top: 1em;
-	padding-top: 1em;
-}
-/* nav ul{
-	position:static;
-	translate: 0 0;
-	padding:0;
-	background: none;
-} */
- 
-/* nav.is-open ul {
-	translate: 0 0;
-  } */
-  
-/* nav li{
-	flex-grow: 0;
-	flex-basis: 0;
-} */
-
-/* nav a {
-	border: none;
-	flex-direction: column;
-} */
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background:#ff2eb0;
 	color-scheme: light dark;
+	
 }
- 
+
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -126,7 +17,161 @@ footer img{
 	overflow: hidden;
 	position: absolute;
 	white-space: nowrap;
-	width: 1px;}
+	width: 1px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+p{
+	color: black;
+}
+@font-face {
+	font-family: "archia-bold";
+	src: url(../fonts/archia-bold.otf);
+}
+
+@font-face {
+	font-family: "archia-regular";
+	src: url(../fonts/archia-regular.otf);
+}
+@font-face{
+	font-family: "modules";
+	src: url(../fonts/modules.woff)
+}
+
+@font-face {
+	font-family: "chaney-extended";
+	src: url(../fonts/chaney-extended.otf);
+}
+
+@font-face {
+	font-family: "chaney-wide";
+	src: url(../fonts/chaney-wide.otf);
+}
+
+@font-face {
+	font-family: "fa-brands";
+	src: url(../fonts/fa-brands-400.woff2);
+}
+
+@font-face {
+	font-family: "parking-regular";
+	src: url(../fonts/parking-regular.otf);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+header {
+	background-color:var(--color-background);
+	height: 5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+header img {
+	width: 9.38em;
+	height: 3.4em;
+	padding-top: 1em;
+	padding-top: 1em;
+	z-index: 1;
+}
+
+nav button{
+	z-index:1;
+	position:relative;
+}
+nav{
+	order: 1;
+}
+
+button svg{
+	width: 50%;
+	z-index:1;
+}  
+
+button{
+    background: none;
+    border: none;
+	padding: 0 0 0 0;
+	z-index:1;
+}
+header a{
+	color: black;
+}
+
+header ul {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	translate: 100% 0;
+	transition: 0.5s;
+	gap: 1em;
+	background-color:var(--color-background);
+
+}
+
+nav.menuOpen ul {
+	translate: 0 0;
+
+}
+
+nav li {
+	flex-basis: 0;
+	flex-grow: 0;
+}
+
+/* nav button{
+	display: none;
+} */
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+/* header a{
+	background-color: white;
+	border-radius: 20em;	
+} */
+
+/* header nav:last-child a, nav button{
+	flex-direction: row-reverse;
+} */
+
+header nav > a:last-child {
+background-color: white;
+border-radius: 20em;
+padding: 1em 2em 1em 2em;
+margin-top: 0%;
+}
+
+/* nav.menuOpen button svg {
+	content: url("https://assets.codepen.io/274456/ui-icon-cross.svg");
+} */
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
 
 
 
@@ -135,4 +180,24 @@ footer img{
 /****************/
 
 /* jouw code */
+footer {
+	background-color: #ff2eb0;
+}
 
+footer img {
+	padding-top: 1em;
+	width: 70%;
+}
+footer p{
+	font-family: "chaney-wide";
+	color: black;
+}
+footer h3{
+	font-family: "parking-regular";
+	color: black;
+	font-size: 150%;
+	margin-left: 10%;
+}
+footer a{
+	margin-left: 10%;
+}

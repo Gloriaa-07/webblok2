@@ -9,6 +9,5 @@ menuButton.onclick = toggleMenu;
 
 
 function toggleMenu() {
-  // alert("het werkt");
-  deNav.classList.toggle("is-open");
+  deNav.classList.toggle("menuOpen");
 }
