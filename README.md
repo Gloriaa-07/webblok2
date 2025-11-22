@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
- Gloria Daniël 
+  Sanne 't Hooft (vervangen door jouw naam)
 
   #### Je startniveau:
-  Blauw
+  hier je startniveau (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  responsive 
+  hier je focus (kies uit responsive óf surface plane)
  
 </details>
 
@@ -36,16 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-Wondr
-https://wondrexperience.com/ams/wondr-experience/
+  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-Wondr
-  <img src="./readme-images/ wondr_homepage.png" width="375px" alt="schermafbeelding homepage website Wondr experience">
+  hier de naam van de pagina  
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-
-  <img src="./readme-images/wondr_bedrijfsevenenmenten.png" width="375px" alt="schermafbeedling bedrijfsevenementen website Wondr experiece">
+  hier de naam van de pagina  
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -57,25 +56,7 @@ Wondr
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
- Tijdens de les heb ik de screenreader van Wondr getest op hun toegankelijkheid. hier zal ik mijn bevindingen benoemen. 
-
-Voordelen: 
-
-- duidelijke navigatie
-- De lettertype was niet al te klein en dus makkelijk te lezen en ook qua content was het makkelijk te volgen
-
-Nadelen: 
-
-- geen alt tekst bij foto's
-- De screen reader beschreef niet wat er in de  video en foto’s gebeurde. 
-- heeft het alleen een light mode. 
-- De screenreader is via de tab te navigeren over de website heen, dus een muis is niet altijd nodig
-- Qua contrast voor slechtziende had wondr geen problemen en voldeed de achtergrond kleur met de tekst goed aan de eisen. 
-- Niet alle buttons hadden een naam of alleen bij de desktop versie 
-- Er staat tekst in de afbeeldingen die niet wordt voorgelezen
-- het was niet mogelijk om de video en de carrousel op pauze te zetten 
-
-Al om al heeft de website dus veel verbeteringen nodig om de toegankelijkheid te verbeteren.
+  Lijst met je bevindingen die in de test naar voren kwamen:
 
 </details>
 
@@ -87,10 +68,13 @@ Al om al heeft de website dus veel verbeteringen nodig om de toegankelijkheid te
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="./readme-images/breakdown-schets-gloria-daniel.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="./readme-images/breakdown-schets-gloria-daniel.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+
+  ### wellicht nog een dynamisch deel (bijv filter): 
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -104,21 +88,19 @@ Al om al heeft de website dus veel verbeteringen nodig om de toegankelijkheid te
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
+  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
-De content in mijn html plaatsen ging best goed. Soms wist ik even niet welke tags ik moest gebruiken maar langzaam begin ik het weer te begrijpen. De breakdown schets heeft hierbij ook erg geholpen. Daarnaast vond ik het lastig om de juiste elementen aan te roepen bij css. Ik dreef het vaak te algemeen waardoor andere dingen ook werden veranderd. Nu probeer ik meer gebruik te maken van nth.first of child. Ik heb ge probeert een menu te maken met JavaScript, maar dat is nog niet gelukt. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  Gloria   
- ik heb een vraag over mijn menu en over dingen aanroepen met css (bijv  root of @media) 
-  
-  Manon
- vraag over dingen aanroepen met css (length of type)
-  Rosa
-vraag over javascript 
-  Bob
-  vraag over animaties verwerken 
+  | student 1      | student 2          | student 3    | student 4        |
+  | ---            | ---                | ---          | ---              |
+  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | ...            | ...                | ...          | ...              |
+
+
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 

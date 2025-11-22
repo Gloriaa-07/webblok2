@@ -9,6 +9,7 @@
 
 
 
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -17,13 +18,11 @@
 	--color-text:#111;
 	--color-background:#eee;
 }
- 
 
 
 
-body {
-    background-color: rgb(0, 0, 0);
-}
+
+
 /****************/
 /* JOUW STYLING */
 /****************/
