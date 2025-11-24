@@ -20,9 +20,9 @@
 	width: 1px;
 }
 
-/* body {
+body {
 	overflow-x: hidden;
-} */
+}
 
 p{
 	color: black;
@@ -94,8 +94,16 @@ header img {
 header nav button {
 	z-index:1;
 	position:relative;
+	display: flex;
+	flex-direction: column; /* icoon boven, tekst onder */
+	align-items: center;
 }
+header span{
+	display: block;
+	text-align: center;
+	font-family: "chaney-wide";
 
+}
 header nav {
 	order: 10;
 }
@@ -111,10 +119,13 @@ button{
 	padding: 0 0 0 0;
 	z-index:1;
 }
-header a{
+header a:nth-of-type(2){
 	color: black;
 }
 
+header li a{
+	font-family: "parking-regular";
+}
 header ul {
 	position: fixed;
 	top: 0;
@@ -124,6 +135,8 @@ header ul {
 	translate: 100% 0;
 	transition: 0.5s;
 	gap: 1em;
+	color: black;
+	padding-top: 30%;
 	background-color:var(--color-background);
 
 }
@@ -158,11 +171,15 @@ a {
 	flex-direction: row-reverse;
 } */
 
-header a:last-child {
+header > a:last-of-type{
 background-color: white;
 border-radius: 20em;
-padding: 1em 2em 1em 2em;
+padding: 0.7em 0.7em 0.7em 0.7em;
 margin-top: 0%;
+font-size: small;
+text-align: center;
+right: 4.5rem;
+position: absolute;
 }
 section:nth-of-type(1){
 	position: relative;
@@ -170,6 +187,10 @@ section:nth-of-type(1){
 section:nth-of-type(1)img{
 position: absolute;
 top:7rem;
+}
+header nav a{
+	color: black;
+	font-size: 250%;
 }
 
 /* nav.menuOpen button svg {
