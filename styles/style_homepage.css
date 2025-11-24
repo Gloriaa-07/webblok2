@@ -13,10 +13,6 @@
     src: url(../fonts/chaney-extended.otf);
 }
 
-@font-face {
-    font-family: "chaney-extended";
-    src: url(../fonts/chaney-extended.otf);
-}
 
 @font-face {
     font-family: "chaney-wide";
@@ -35,9 +31,32 @@
 
 /* section 1 */
 section:nth-of-type(1) img {
-    /* display: flex;
-    align-items: end; */
-    width: 7em;
+    width: 90%;
+    position: absolute;
+    top:14rem;
+    left: 1rem;
+}
+section h1 strong:nth-of-type(1) {
+    position: absolute;
+    background-color: #8004e1;
+    max-width: max-content;
+    font-size: medium;
+    top: 11rem;
+    left:5rem;
+}
+section h1 strong:nth-of-type(2) {
+    position: absolute;
+    background-color: black;
+padding-top: 0;
+margin: 0;
+    font-size: larger;
+    top: 12rem;
+    font-family: "parking-regular";
+  left:5rem;
+}
+section:nth-of-type(1) p{
+    margin-top: 30%;
+    margin-bottom: 30%;
 }
 
 section video {
@@ -140,11 +159,8 @@ section:nth-of-type(5) a {
     max-width: 70%;
 }
 
-section h1 strong {
-    background-color: #8004e1;
-    max-width: max-content;
-    font-family: "chaney-wide";
-}
+
+
 
 section h1 {
     font-family: "chaney-wide";
@@ -163,10 +179,13 @@ section:nth-of-type(2) h3 {
 
 p {
     font-family: "archia-regular";
-    display: flex;
     text-align: center;
+    position: relative;
     width: 50%;
-    justify-content: center;
+    left: 25%;
+    right: 20%;
+    line-height: 160%;
+    font-size: large;
 }
 
 /* section 4 */
