@@ -86,10 +86,13 @@ section:nth-of-type(1) {
 
 section:nth-of-type(2) {
     background-image: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
+    margin-bottom: 10%;
 }
 
 section:nth-of-type(4) {
     background-color: #ffeaf5 !important;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 section:nth-of-type(5) {
@@ -112,7 +115,9 @@ section:nth-of-type(3) img {
 }
 
 /* tweede section */
-
+section:nth-of-type(3){
+    height: 30em;
+}
 section:nth-of-type(2) a {
     background-color: white;
     border-radius: 20em;
@@ -208,6 +213,7 @@ section:nth-of-type(4) h3 {
     display: flex;
     justify-content: center;
     color: black;
+    margin-bottom: 10%;
 }
 
 a {
