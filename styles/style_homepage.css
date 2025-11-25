@@ -36,26 +36,10 @@ section:nth-of-type(1) img {
     top:14rem;
     left: 1rem;
 }
-section h1 strong:nth-of-type(1) {
-    position: absolute;
-    background-color: #8004e1;
-    max-width: max-content;
-    font-size: medium;
-    top: 11rem;
-    left:5rem;
-}
-section h1 strong:nth-of-type(2) {
-    position: absolute;
-    background-color: black;
-font-weight: lighter;
-    font-size: larger;
-    top: 12rem;
-    font-family: "parking-regular";
-  left:5rem;
-}
+
 section:nth-of-type(1) p{
-    margin-top: 30%;
-    margin-bottom: 20%;
+    margin-top: 35%;
+    color: #000000;
 }
 
 section video {
@@ -74,10 +58,10 @@ gap: 4%;
     gap: 10%;
 } */
 ul li img {
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: center;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
 }
 
 section:nth-of-type(1) {
@@ -86,7 +70,7 @@ section:nth-of-type(1) {
 
 section:nth-of-type(2) {
     background-image: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
-    margin-bottom: 10%;
+    height: 120em;
 }
 
 section:nth-of-type(4) {
@@ -113,6 +97,27 @@ section:nth-of-type(3) img {
     flex-direction: column;
     scroll-snap-align: center; */
 }
+/* h1 */
+section h1 {
+    font-family: "chaney-wide";
+}
+section h1 strong:nth-of-type(1) {
+    position: absolute;
+    background-color: #8004e1;
+    max-width: max-content;
+    font-size: medium;
+    top: 11rem;
+    left:5rem;
+}
+section h1 strong:nth-of-type(2) {
+    position: absolute;
+    background-color: black;
+font-weight: lighter;
+    font-size: larger;
+    top: 12rem;
+    font-family: "parking-regular";
+  left:5rem;
+}
 
 /* tweede section */
 section:nth-of-type(3){
@@ -123,6 +128,9 @@ section:nth-of-type(2) a {
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
     margin-top: 0%;
+    color: black;
+    text-align: center;
+    margin-left: 1em;
 }
 
 section:nth-of-type(3) a {
@@ -130,8 +138,9 @@ section:nth-of-type(3) a {
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
     margin-top: 0%;
+    color: white;
 }
-
+/* 
 section a:nth-of-type(1) {
     background-color: black;
     border-radius: 20em;
@@ -139,16 +148,16 @@ section a:nth-of-type(1) {
     margin-top: 0%;
     color: white;
     text-align: center;
-}
+} */
 
-section a:nth-of-type(2) {
+/* section:nth-of-type(2)a {
     background-color: white;
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
     margin-top: 0%;
     color: black;
     text-align: center;
-}
+} */
 
 section:nth-of-type(5) a {
     display: block;
@@ -170,30 +179,21 @@ section:nth-of-type(5) a {
 
 
 
-section h1 {
-    font-family: "chaney-wide";
-}
+
 
 section:nth-of-type(2) ul {
-    display: grid;
-    justify-content: center;
-    margin-left: 12%;
-    gap: 8%;
+    margin-left: 8%;
+    gap: 5%;
 }
 
 section:nth-of-type(2) h3 {
     font-family: "parking-regular";
-}
-
-p {
-    font-family: "archia-regular";
-    text-align: center;
     position: relative;
-    width: 50%;
-    left: 25%;
-    right: 20%;
-    line-height: 160%;
-    font-size: large;
+    top:24.5rem;
+    font-size: 1.7em;
+    color: black;
+    width: 80%;
+    text-align: center;
 }
 
 /* section 4 */
@@ -216,9 +216,7 @@ section:nth-of-type(4) h3 {
     margin-bottom: 10%;
 }
 
-a {
-    font-family: "chaney-wide";
-}
+
 
 section:nth-of-type(4) ul {
     display: flex;
@@ -244,8 +242,32 @@ bottom: 1rem;
 
 
 /* section 5 */
-/* section:nth-of-type(5) a{
-
+section:nth-of-type(5){
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+section h2 strong:nth-of-type(1){
+    background-color: #8004e1;
+}
+section h2 strong:nth-of-type(2){
+    background-color: #000000;
+    font-size: xx-large;
+}
+/* section 5 */
+section:nth-of-type(5)h2{
+    flex-direction: column;}
+    section:nth-of-type(5)img{
+display: flex;
+    }
+/* section h2 strong:nth-of-type(2) {
+    position: absolute;
+    background-color: black;
+font-weight: lighter;
+    font-size: larger;
+    top: 12rem;
+    font-family: "parking-regular";
+  left:5rem;
 } */
 /* footer */
 input {

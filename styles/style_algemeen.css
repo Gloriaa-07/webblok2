@@ -23,10 +23,13 @@
 body {
 	overflow-x: hidden;
 }
-
-p{
-	color: black;
+a {
+    font-family: "chaney-wide";
 }
+
+/* p{
+	color: black;
+} */
 @font-face {
 	font-family: "archia-bold";
 	src: url(../fonts/archia-bold.otf);
@@ -191,6 +194,17 @@ top:7rem;
 header nav a{
 	color: black;
 	font-size: 250%;
+}
+
+p {
+    font-family: "archia-regular";
+    text-align: center;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    right: 20%;
+    line-height: 160%;
+    font-size: large;
 }
 
 /* nav.menuOpen button svg {
