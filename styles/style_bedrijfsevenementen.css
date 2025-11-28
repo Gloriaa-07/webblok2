@@ -55,9 +55,65 @@ font-weight: lighter;
 }
 section:nth-of-type(1) {
     background-image: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
-    height: 40em;
+    height: 45em;
 }
 section:nth-of-type(1) p{
-    margin-top: 25%;
+    margin-top: 15%;
     color: #000000;
+    display: flex;
+    justify-content: center;
+}
+p {
+    font-family: "archia-regular";
+    text-align: center;
+    position: relative;
+    width: 70%;
+    font-size: large;
+}
+section:nth-of-type(1) > img:last-of-type{
+    width: 15%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 4em;
+}
+section:nth-of-type(1) a {
+    background-color: white;
+    border-radius: 20em;
+    padding: 1em 2em 1em 2em;
+    margin-top: 0%;
+    color: black;
+    text-align: center;
+    margin-left: 1em;
+}
+section:nth-of-type(2) img{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* section 2 */
+
+section:nth-of-type(2) {
+    background-color: #ffeaf5 !important;
+}
+section:nth-of-type(4) {
+    background-color: #ffeaf5 !important;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 10%;
+}
+
+section:nth-of-type(2) h2{
+    color: #000000;
+    font-family:"archia-regular" ;
+    font-weight: 300;
+    padding-bottom: 1em;
+    font-size: 103%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    display: flex;
+    justify-content: center;
 }

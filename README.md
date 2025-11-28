@@ -150,7 +150,21 @@ vraag over javascript
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
+1. Gloria
+ik heb een vraag over over postioneren, (relative absolute), 
+:root light en dark mode gebruiken,
+ruimte verwijderen in footer 
 
+2. manon 
+Mijn vragen zijn:
+- menu close icon fiksen
+- dark modus
+- elementen komen door mijn menu heen.
+- de prijs moet bold, maar hoe kan dat het makkelijkst
+
+3. Rosa
+
+4. bob 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

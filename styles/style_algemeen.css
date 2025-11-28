@@ -1,11 +1,17 @@
 /**************/
-/* CSS REMEDY */
+/* Algemeen */
 /**************/
 
 :root {
 	/* startje */
-	--color-text: #111;
-	--color-background:#ff2eb0;
+	--color-text-black:black;
+	--color-text-white: white;
+	--background-image-main: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
+	--background-image-main2:  #ffeaf5 !important;
+	--color-background-pink:#ff2eb0;
+	--color-background-purple:#8004e1;
+	/* --prefers-color-scheme: light dark (white black) */
+	/* --whitespace:clamp(0, 0em, 37em); */
 	color-scheme: light dark;
 	
 }
@@ -27,9 +33,7 @@ a {
     font-family: "chaney-wide";
 }
 
-/* p{
-	color: black;
-} */
+/* lettertypes */
 @font-face {
 	font-family: "archia-bold";
 	src: url(../fonts/archia-bold.otf);
@@ -71,12 +75,20 @@ a {
 	margin: 0;
 }
 
+/* @media{
+
+} */
 html {
 	scroll-behavior: smooth;
 }
 
+/**************/
+/* Header*/
+/**************/
+
+
 header {
-	background-color:var(--color-background);
+	background-color:var(--color-background-pink);
 	height: 5em;
 	display: flex;
 	justify-content: space-between;
@@ -85,6 +97,10 @@ header {
 	top: 0;
 	z-index: 1;
 }
+header nav button{
+    text-align: center;
+}
+
 
 header img {
 	width: 9.38em;
@@ -98,7 +114,7 @@ header nav button {
 	z-index:1;
 	position:relative;
 	display: flex;
-	flex-direction: column; /* icoon boven, tekst onder */
+	flex-direction: column; 
 	align-items: center;
 }
 header span{
@@ -110,11 +126,11 @@ header span{
 header nav {
 	order: 10;
 }
-
+/* 
 button svg{
 	width: 50%;
 	z-index:1;
-}  
+}   */
 
 button{
     background: none;
@@ -123,7 +139,7 @@ button{
 	z-index:1;
 }
 header a:nth-of-type(2){
-	color: black;
+	color:var(--color-text-black);
 }
 
 header li a{
@@ -138,9 +154,9 @@ header ul {
 	translate: 100% 0;
 	transition: 0.5s;
 	gap: 1em;
-	color: black;
+	color: var(--color-text-black);
 	padding-top: 30%;
-	background-color:var(--color-background);
+	background-color:var(--color-background-pink);
 
 }
 
@@ -165,6 +181,18 @@ li {
 a {
 	text-decoration: none;
 }
+/* a:hover{
+background-color:var(--prefers-color-scheme);
+cursor: pointer;
+transform: scale(0.1px);
+}
+a:active{
+
+}
+a:focus-visible{
+
+}
+button */
 /* header a{
 	background-color: white;
 	border-radius: 20em;	
@@ -175,7 +203,7 @@ a {
 } */
 
 header > a:last-of-type{
-background-color: white;
+background-color: var(--color-text-white);
 border-radius: 20em;
 padding: 0.7em 0.7em 0.7em 0.7em;
 margin-top: 0%;
@@ -184,63 +212,161 @@ text-align: center;
 right: 4.5rem;
 position: absolute;
 }
-section:nth-of-type(1){
-	position: relative;
-}
-section:nth-of-type(1)img{
-position: absolute;
-top:7rem;
-}
 header nav a{
-	color: black;
+	color:var(--color-text-black);
 	font-size: 250%;
 }
 
-p {
-    font-family: "archia-regular";
-    text-align: center;
-    position: relative;
-    width: 50%;
-    left: 25%;
-    right: 20%;
-    line-height: 160%;
-    font-size: large;
+
+/**************/
+/* Main */
+/**************/
+
+
+main section:nth-of-type(1){
+	position: relative;
 }
+main section:nth-of-type(1)img{
+position: absolute;
+top:7rem;
+}
+main blockquote {
+    font-family: "archia-regular";
+    display: flex;
+	justify-content: center;
+    text-align: center;
+    color:var(--color-text-black);
+ /* margin-left: 12%;
+ margin-right: 12%; */
+ font-weight: 300;
+ padding-bottom: 1em;
+ width: 70%;
+ margin: auto;
+ padding-bottom: 10%;
+
+}
+
+main section:nth-of-type(4) h3 {
+    font-family: "archia-bold";
+    display: flex;
+    justify-content: center;
+    color: var(--color-text-black);
+    margin-bottom: 10%;
+}
+
 
 /* nav.menuOpen button svg {
 	content: url("https://assets.codepen.io/274456/ui-icon-cross.svg");
 } */
 
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-
 
 
 /****************/
-/* JOUW STYLING */
+/* footer */
 /****************/
-
-/* jouw code */
-footer {
-	background-color: #ff2eb0;
+footer  {
+	background-color:var(--color-background-pink);
+}
+footer *{
+	width: 80%;
+	margin: auto;
+}
+/* footer section:nth-of-type(3){
+	width: 80%;
+	margin: auto;
+} */
+footer ul, footer h3, footer nav{
+	margin: 0%;
+	padding: 0%;
 }
 
-footer img {
-	padding-top: 1em;
-	width: 70%;
+footer section img {
+	padding-top: 15%;
+	/* width: 70%; */
+position: relative;
+	left: -10%;
 }
+/* footer section:nth-of-type(3) ul{
+	width: 0;
+} */
 footer p{
 	font-family: "chaney-wide";
 	color: black;
+	text-align: start;
+	margin: 0%;
+
 }
-footer h3{
+footer li, footer a{
+	margin: 0%;
+	padding:0%;
+}
+footer section:nth-of-type(4) ul{
+	padding-bottom: 10%;
+	list-style-type: none;
+}
+footer section:nth-of-type(3) ul{
+	display: flex;
+}
+footer h3, footer h2{
 	font-family: "parking-regular";
-	color: black;
+	color:var(--color-text-black);
 	font-size: 150%;
-	margin-left: 10%;
+	margin-bottom: 8%;
+	margin-top: 8%;
+	margin: 0%;
+	padding-bottom: 10%;
+}
+footer input{
+	margin: 0%;
+	appearance:none;
+	font:inherit;
+	width:100%;
+	background-color: var(--color-text-white);
+    border-radius: 20em;
+    padding: 1em 2em 1em 2em;
+}
+footer h3:hover{
+	cursor: pointer;
 }
 footer a{
-	margin-left: 10%;
+	font-family: "archia-regular";
+	/* width: 80%;
+	margin: auto; */
+	display: flex;
+	color: black;
 }
+footer section:nth-of-type(5) p:last-of-type{
+	color: #666666;
+	font-family: "archia-regular";
+	margin-bottom: 10%;
+}
+footer section:nth-of-type(4) ul:nth-of-type(1) a:first-of-type{
+	text-decoration: underline;
+	/* padding-bottom: 10%; */
+
+}
+/* footer section a:nth-of-type(1){
+	background-color: black;
+	border-radius: 100%;
+	width: 3em;
+	height: 3em;
+	display: inline-flex;
+} */
+footer section:nth-of-type(3) a{
+	background-color:var(--color-text-black);
+	border-radius: 100%;
+	width: 3em;
+	height: 3em;
+	display: inline-flex;
+}
+/* footer section svg:nth-of-type(1) {
+	margin-left:19%;
+	margin-top: 20%;
+} */
+/* 
+footer input {
+    width: 60%;
+    border:var(--color-text-black);
+}
+ */
+
