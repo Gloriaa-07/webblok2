@@ -163,9 +163,9 @@ Mijn vragen zijn:
 - de prijs moet bold, maar hoe kan dat het makkelijkst
 
 3. Rosa
-
+datum toevoegen 
 4. bob 
-
+-
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 

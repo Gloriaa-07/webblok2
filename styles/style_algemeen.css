@@ -4,15 +4,18 @@
 
 :root {
 	/* startje */
+	color-scheme: light dark;
 	--color-text-black:black;
+	--button-background: light-dark(black, white);
+	--button-color: light-dark(white, black);
 	--color-text-white: white;
 	--background-image-main: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
 	--background-image-main2:  #ffeaf5 !important;
 	--color-background-pink:#ff2eb0;
 	--color-background-purple:#8004e1;
-	/* --prefers-color-scheme: light dark (white black) */
+	--prefers-color-scheme: light dark (white black);
 	/* --whitespace:clamp(0, 0em, 37em); */
-	color-scheme: light dark;
+	
 	
 }
 
@@ -267,7 +270,7 @@ main section:nth-of-type(4) h3 {
 footer  {
 	background-color:var(--color-background-pink);
 }
-footer *{
+footer > *{
 	width: 80%;
 	margin: auto;
 }
@@ -282,9 +285,7 @@ footer ul, footer h3, footer nav{
 
 footer section img {
 	padding-top: 15%;
-	/* width: 70%; */
-position: relative;
-	left: -10%;
+	width: 90%;
 }
 /* footer section:nth-of-type(3) ul{
 	width: 0;
@@ -320,7 +321,7 @@ footer input{
 	margin: 0%;
 	appearance:none;
 	font:inherit;
-	width:100%;
+	width:70%;
 	background-color: var(--color-text-white);
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
