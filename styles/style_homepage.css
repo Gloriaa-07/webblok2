@@ -1,4 +1,3 @@
-
 /**************/
 /* Algemeen */
 /**************/
@@ -32,7 +31,8 @@ section h1 {
 
 section h1 strong:nth-of-type(1) {
     position: absolute;
-    background-color:var(--color-background-purple);
+    background-color: var(--color-background-purple);
+    color: var(--color-text-white);
     max-width: max-content;
     font-size: medium;
     top: 11rem;
@@ -41,13 +41,15 @@ section h1 strong:nth-of-type(1) {
 
 section h1 strong:nth-of-type(2) {
     position: absolute;
-    background-color:var(--color-text-black);
+    background-color: var(--background-color-black);
+    color: var(--color-text-white);
     font-weight: lighter;
     font-size: larger;
     top: 12rem;
     font-family: "parking-regular";
     left: 5rem;
 }
+
 main section:nth-of-type(1) img {
     width: 90%;
     position: absolute;
@@ -57,28 +59,31 @@ main section:nth-of-type(1) img {
 
 main section:nth-of-type(1) p {
     margin-top: 35%;
-    color:var(--color-text-black);
+    color: var(--color-text-black);
 }
 
 section video {
     width: 100%;
     height: auto;
 }
+
 main section:nth-of-type(1) {
+    /* background-image: var(--dark-backgr); */
     background-image: var(--background-image-main);
 }
 
-main section:nth-of-type(1) div button img{
+main section:nth-of-type(1) div button img {
     width: 10%;
     position: absolute;
     top: 23%;
-    background-color:var(--color-background-pink);
+    background-color: var(--color-background-pink);
     padding-top: 1%;
     padding-bottom: 1%;
     border-radius: 12%;
     left: 88%;
     opacity: 0.8;
 }
+
 main section:nth-of-type(1) p {
     font-family: "archia-regular";
     text-align: center;
@@ -93,10 +98,12 @@ main section:nth-of-type(1) p {
 main section:nth-of-type(1) {
     position: relative;
 }
+
 main section h2 strong:nth-of-type(1) {
     background-color: var(--color-background-purple);
     text-align: center;
 }
+
 main section>button:last-of-type {
     position: fixed;
     bottom: 1rem;
@@ -126,17 +133,18 @@ main section:nth-of-type(2) a {
     order: 3;
     width: max-content;
 }
+
 main section:nth-of-type(2) ul {
     margin-left: 9%;
-    gap: 5%;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
 }
 
 main section:nth-of-type(2) h3 {
     font-family: "parking-regular";
     font-size: 1.7em;
-    color:var(--color-text-black);
+    color: var(--color-text-black);
     width: 80%;
     text-align: center;
     font-weight: 300;
@@ -152,17 +160,21 @@ main section h2 strong:nth-of-type(2) {
     font-size: xx-large;
     text-align: center;
 }
+
 main section:nth-of-type(2) {
     background-image: var(--background-image-main);
     height: 120em;
 }
 
-main section:nth-of-type(2) li{
+main section:nth-of-type(2) li {
     display: flex;
     flex-direction: column;
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
 }
 
+main section:nth-of-type(2) img:last-of-type {
+    overflow-x: hidden;
+}
 
 
 
@@ -188,7 +200,7 @@ main section:nth-of-type(2) li{
 /* section 3*/
 /**************/
 main section:nth-of-type(3)>a:last-of-type {
-    background-color:var(--button-background);
+    background-color: var(--button-background);
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
     color: var(--button-color);
@@ -201,6 +213,7 @@ main section:nth-of-type(3) a {
     text-decoration: underline;
     font-family: "archia-regular";
 }
+
 main section:nth-of-type(3) {
     height: 30em;
     width: 80%;
@@ -223,6 +236,7 @@ main section:nth-of-type(3) p {
     line-height: 160%;
     font-size: large;
 }
+
 main section:nth-of-type(3) img {
     display: flex;
     overflow-x: auto;
@@ -250,7 +264,7 @@ main section:nth-of-type(3) img {
 /**************/
 
 main section:nth-of-type(4) {
-    background-color:var(--background-image-main2);
+    background-color: var(--background-image-main2);
     /* display: flex;
     flex-direction: column-reverse; */
     padding-top: 10%;
@@ -346,25 +360,28 @@ main section:nth-of-type(5) h2 strong {
     flex-direction: column;
     width: fit-content;
 }
-main section:nth-of-type(5) h2 strong:nth-of-type(2){
+
+main section:nth-of-type(5) h2 strong:nth-of-type(2) {
     font-size: 210%;
     width: max-content;
     font-weight: 300;
-margin: auto;
+    margin: auto;
 }
-main section:nth-of-type(5) h2 strong:nth-of-type(1){
+
+main section:nth-of-type(5) h2 strong:nth-of-type(1) {
 
     width: max-content;
-margin: auto;
+    margin: auto;
 }
 
 
 main section:nth-of-type(5) h2 {
     flex-direction: column;
-padding-top: 10%;
-font-family: "parking-regular";
+    padding-top: 10%;
+    font-family: "parking-regular";
 }
-section:nth-of-type(5) ul{
+
+section:nth-of-type(5) ul {
     padding-top: 15%;
 }
 
@@ -373,9 +390,6 @@ main section:nth-of-type(5)img {
     display: flex;
 }
 
-/* div section>button svg:first-of-type {
-    will-change: 20em;
-} */
 
 main section:nth-of-type(5) a:first-of-type {
     background-color: var(--color-text-black);
@@ -396,6 +410,7 @@ main section:nth-of-type(5) a:last-of-type {
     text-align: center;
     width: max-content;
 }
+
 main section:nth-of-type(5) {
     background-image: var(--background-image-main);
 }
@@ -405,6 +420,48 @@ main section:nth-of-type(5) img {
     width: 20em;
 }
 
+main section:nth-of-type(5) ul {
+
+        display:flex;
+        overflow:auto;
+        scroll-snap-type:x mandatory;
+        scroll-behavior:smooth;
+        overscroll-behavior-x:contain;
+        gap:1em;
+        scrollbar-width:thin;
+        scrollbar-color: var(--color-background-pink) transparent;
+}
+
+main section:nth-last-of-type(5) li{
+    flex-basis:100%;
+    flex-shrink:0;
+    scroll-snap-align:center;
+}
+main section:nth-of-type(5) li{
+    display:flex;
+    align-items: flex-end;
+}
+main section:nth-of-type(5) ul::scroll-marker-group {
+    height:3em;
+    margin:1em 3.5em 0;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    row-gap:.25em;
+    column-gap:.5em;
+  }
+  
+
+
+
+
+
+
+/* main{
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+} */
 
 
 
@@ -418,7 +475,7 @@ main section:nth-of-type(5) img {
 
 
 
-a:hover{
+a:hover {
     translate: 0 -.5em;
     background-color: var(--color-background-pink);
 }
@@ -510,4 +567,4 @@ section a:nth-of-type(1) {
 
 
 
-/* toevoegen dat de video uit gaat als iemand weinig motion wil in hun instellingn */
+/* toevoegen dat de video uit gaat als iemand weinig motion wil in hun instellingen */

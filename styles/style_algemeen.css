@@ -6,12 +6,19 @@
 	/* startje */
 	color-scheme: light dark;
 	--color-text-black:black;
-	--button-background: light-dark(black, white);
-	--button-color: light-dark(white, black);
 	--color-text-white: white;
+	/* --color-background:  */
+	--button-background: light-dark(black, white);
+	--background-color-button-footer: black;
+	--button-color: light-dark(white, black);
+	--background-color-black: black;
+	--background-color-main: light-dark(#ffeaf5, #FF2EC5);
 	--background-image-main: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
+	--dark-backgr:linear-gradient(180deg,#1b2a49 0%,#273c75 25%,#40739e 75%,#192a56 100%) !important;
 	--background-image-main2:  #ffeaf5 !important;
-	--color-background-pink:#ff2eb0;
+	--color-background-pink:#FF4EB5;
+	--color-form-button: light-dark(black, white);
+	--color-form-button-border: light-dark(black black);
 	--color-background-purple:#8004e1;
 	--prefers-color-scheme: light dark (white black);
 	/* --whitespace:clamp(0, 0em, 37em); */
@@ -46,11 +53,6 @@ a {
 	font-family: "archia-regular";
 	src: url(../fonts/archia-regular.otf);
 }
-@font-face{
-	font-family: "modules";
-	src: url(../fonts/modules.woff)
-}
-
 @font-face {
 	font-family: "chaney-extended";
 	src: url(../fonts/chaney-extended.otf);
@@ -98,7 +100,7 @@ header {
 	align-items: center;
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	z-index: 2;
 }
 header nav button{
     text-align: center;
@@ -269,6 +271,8 @@ main section:nth-of-type(4) h3 {
 /****************/
 footer  {
 	background-color:var(--color-background-pink);
+	display: flex;
+	flex-direction: column;
 }
 footer > *{
 	width: 80%;
@@ -282,17 +286,18 @@ footer ul, footer h3, footer nav{
 	margin: 0%;
 	padding: 0%;
 }
-
-footer section img {
+footer img {
 	padding-top: 15%;
-	width: 90%;
+	width: 80%;
+	margin: auto;
+	display: block;
 }
 /* footer section:nth-of-type(3) ul{
 	width: 0;
 } */
-footer p{
+footer section:nth-of-type(1) p{
 	font-family: "chaney-wide";
-	color: black;
+	color: var(--color-text-black);
 	text-align: start;
 	margin: 0%;
 
@@ -305,38 +310,75 @@ footer section:nth-of-type(4) ul{
 	padding-bottom: 10%;
 	list-style-type: none;
 }
-footer section:nth-of-type(3) ul{
+footer section:nth-of-type(2) ul{
 	display: flex;
+	gap:4%;
+	padding-bottom: 1em;
 }
 footer h3, footer h2{
 	font-family: "parking-regular";
 	color:var(--color-text-black);
-	font-size: 150%;
+	font-size: xx-large;
+	font-weight: lighter;
 	margin-bottom: 8%;
 	margin-top: 8%;
 	margin: 0%;
 	padding-bottom: 10%;
 }
+ footer section:nth-of-type(2) nav {
+	border-bottom: solid var(--color-text-black);
+	border-width: 0.1em;
+ }
 footer input{
 	margin: 0%;
 	appearance:none;
 	font:inherit;
-	width:70%;
+	width:60%;
 	background-color: var(--color-text-white);
-    border-radius: 20em;
-    padding: 1em 2em 1em 2em;
+    border-radius: 1.375em 0 0 1.375em;
+    padding: 0.6em 1em 0.6em 1em;
+	border: solid;
+	border-color: var(--color-text-black);
+	font:inherit;
+	appearance:none;
+	border-width: medium;
+}
+footer input::placeholder {
+	font-family: "archia-regular";
+	width: 100%;
+	font-size: medium;
+}
+footer form{
+	/* margin-bottom: 15%;
+	margin-top: 10%; */
+	display: flex;
 }
 footer h3:hover{
 	cursor: pointer;
+}
+footer section:nth-of-type(1) button{
+	border-radius: 0 2em 2em 0;
+	padding: 1.1em 1em 1em 1em;
+	border-width: medium;
+	background-color: var(--background-color-button-footer);
+	color: var(--color-text-white);
+	position: relative;
+    right: 2%;
+	width: 40%;
+}
+footer section:nth-of-type(1) p,footer section:nth-of-type(1) form{
+	/* gap:10%; */
+	padding-bottom: 10%;
+	font-size: larger;
 }
 footer a{
 	font-family: "archia-regular";
 	/* width: 80%;
 	margin: auto; */
 	display: flex;
-	color: black;
+	color: var(--color-text-black);
 }
-footer section:nth-of-type(5) p:last-of-type{
+footer section:nth-of-type(4) p{
 	color: #666666;
 	font-family: "archia-regular";
 	margin-bottom: 10%;
@@ -346,6 +388,14 @@ footer section:nth-of-type(4) ul:nth-of-type(1) a:first-of-type{
 	/* padding-bottom: 10%; */
 
 }
+/* footer address{
+	display: flex;
+	flex-direction:column;
+padding-bottom: 2em;
+} */
+/* footer section:nth-of-type(2), footer address{
+	gap: 20%;
+} */
 /* footer section a:nth-of-type(1){
 	background-color: black;
 	border-radius: 100%;
@@ -353,17 +403,36 @@ footer section:nth-of-type(4) ul:nth-of-type(1) a:first-of-type{
 	height: 3em;
 	display: inline-flex;
 } */
-footer section:nth-of-type(3) a{
+footer section:nth-of-type(2) a{
 	background-color:var(--color-text-black);
 	border-radius: 100%;
 	width: 3em;
 	height: 3em;
 	display: inline-flex;
 }
-/* footer section svg:nth-of-type(1) {
+/* footer section:nth-of-type(3) svg{
+	margin-top: 18%;
+    margin-left: 19%;
+} */
+footer section:nth-of-type(2) ul{
+	display: flex;
+}
+
+footer section:nth-of-type(4){
+	margin-top: 10%;
+}
+footer h4{
+	font-family: "archia-bold";
+	color: var(--color-text-black);
+}
+footer section svg:nth-of-type(1) {
 	margin-left:19%;
 	margin-top: 20%;
-} */
+}
+address{
+	font-style: normal;
+	padding-top: 1em;
+}
 /* 
 footer input {
     width: 60%;
@@ -371,3 +440,11 @@ footer input {
 }
  */
 
+/* @keyframes section:thh {
+	transelate: 180deg;
+	animation-name:
+
+} */
+
+/* vraag over gap toepassen */
+/* hoogte van een section */
