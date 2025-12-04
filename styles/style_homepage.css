@@ -67,9 +67,8 @@ section video {
     height: auto;
 }
 
-main section:nth-of-type(1) {
-    /* background-image: var(--dark-backgr); */
-    background-image: var(--background-image-main);
+section:nth-of-type(1) {
+    background-color: var(--background-image-main);
 }
 
 main section:nth-of-type(1) div button img {
@@ -90,13 +89,13 @@ main section:nth-of-type(1) p {
     margin: auto;
     width: 50%;
     padding-top: 30%;
-    padding-bottom: 25%;
     line-height: 160%;
     font-size: large;
 }
 
 main section:nth-of-type(1) {
     position: relative;
+    background-image: var(--background-image-main);
 }
 
 main section h2 strong:nth-of-type(1) {
@@ -108,6 +107,24 @@ main section>button:last-of-type {
     position: fixed;
     bottom: 1rem;
     right: 24em;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section>button:last-of-type ulL:nth-of-type(1){
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    translate: 100% 0;
+    transition: 0.5s;
+    gap: 1em;
+    color: var(--color-text-black);
+    padding-top: 30%;
+    background-color: var(--color-background-pink);
 }
 
 
@@ -128,10 +145,12 @@ main section:nth-of-type(2) a {
     margin-top: 0%;
     color: var(--color-text-black);
     text-align: center;
-    margin-left: 1em;
     display: inline-block;
     order: 3;
     width: max-content;
+    transition: color .3s 
+    ease 0s, background-color .3s 
+    ease 0s;
 }
 
 main section:nth-of-type(2) ul {
@@ -163,7 +182,6 @@ main section h2 strong:nth-of-type(2) {
 
 main section:nth-of-type(2) {
     background-image: var(--background-image-main);
-    height: 120em;
 }
 
 main section:nth-of-type(2) li {
@@ -174,6 +192,10 @@ main section:nth-of-type(2) li {
 
 main section:nth-of-type(2) img:last-of-type {
     overflow-x: hidden;
+}
+main section:nth-of-type(2) a:hover{
+    background-color: var(--color-background-pink);
+    
 }
 
 
@@ -208,6 +230,13 @@ main section:nth-of-type(3)>a:last-of-type {
     text-decoration: none;
     font-family: "chaney-wide";
 }
+main section:nth-of-type(3)>a:last-of-type:hover{
+    background-color: var(--color-background-pink);
+    translate: 0 .5em;
+    transition: color .3s 
+    ease 0s, background-color .3s 
+    ease 0s;
+}
 
 main section:nth-of-type(3) a {
     text-decoration: underline;
@@ -215,7 +244,7 @@ main section:nth-of-type(3) a {
 }
 
 main section:nth-of-type(3) {
-    height: 30em;
+    padding-bottom: 10%;
     width: 80%;
     margin: auto;
 }
@@ -475,8 +504,8 @@ main section:nth-of-type(5) ul::scroll-marker-group {
 
 
 
-a:hover {
-    translate: 0 -.5em;
+main a:hover {
+    translate: 0 .5em;
     background-color: var(--color-background-pink);
 }
 
@@ -495,11 +524,15 @@ main ul li img {
     display: flex;
     justify-content: center;
     order: 1;
+    transition:.3s 
+    ease 0s, .3s 
+    ease 0s;
     /* margin-bottom: 30%; */
 }
 
 main ul li img:hover {
     cursor: pointer;
+transform:scale(1.1);
 }
 
 
