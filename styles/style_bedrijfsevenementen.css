@@ -13,6 +13,7 @@ section h1 {
 section h1 strong:nth-of-type(1) {
     position: absolute;
     background-color: black;
+    color: var(--color-white);
     text-align: center;
     max-width: max-content;
     font-size: 1.4em;
@@ -23,6 +24,7 @@ section h1 strong:nth-of-type(1) {
 section h1 strong:nth-of-type(2) {
     position: absolute;
     background-color: black;
+    color: var(--color-white);
     text-align: center;
     max-width: max-content;
     font-size: 1.4em;
@@ -33,6 +35,7 @@ section h1 strong:nth-of-type(2) {
 section h1 strong:nth-of-type(3) {
     position: absolute;
     background-color:#8004e1;
+    color: var(--color-white);
 font-weight: lighter;
     font-size: medium;
     top: 17.2rem;
@@ -44,20 +47,19 @@ h1 strong{
 }
 /* achtergrond */
 main section:nth-of-type(1) {
-    background-image: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%) !important;
-
+  background-image: var(--background-img-main); 
     height: 100dvh;
 }
 main section:nth-of-type(1) p{
     margin-top: 15%;
-    color: var(--color-text-black);
+    color: var(--color-p);
     display: flex;
     justify-content: center;
     width: 65%;
     margin: auto;
     padding-bottom: 10%;
 }
-p {
+main p {
     font-family: "archia-regular";
     text-align: center;
     position: relative;
@@ -74,7 +76,7 @@ main section:nth-of-type(1) > img:last-of-type{
 }
 
 main section:nth-of-type(1) a {
-    background-color: var(--color-text-white);
+    background-color: var(--color-white);
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
     margin-top: 0%;
@@ -93,24 +95,27 @@ margin-bottom: 10%;
 main section:nth-of-type(1) a:hover{
     translate: 0 .5em;
     background-color: var(--color-background-pink);
+    color: var(--color-white);
 }
 
 /* grootte van de verschillende foto's */
-section:nth-of-type(2) > img{
+
+main section:nth-of-type(2) ul li:nth-of-type(1) img {
     width: 10em;
 }
-section:nth-of-type(2)  > img:nth-of-type(2){
-    width: 4em;
+
+main section:nth-of-type(2) ul li:nth-of-type(2) img {
+    width: 5em;
 }
-section:nth-of-type(2) > img:nth-of-type(3){
+main section:nth-of-type(2) ul li:nth-of-type(3) img{
     width: 12em;
 
 }
-section:nth-of-type(2) > img:nth-of-type(4){
+main section:nth-of-type(2) ul li:nth-of-type(4) img {
     width: 12em;
 
 }
-section:nth-of-type(2) > img:nth-of-type(5){
+main section:nth-of-type(2) ul li:nth-of-type(5) img {
     width: 6em;
 
 }
@@ -121,10 +126,12 @@ main section:nth-of-type(2) ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0%;
+    padding: 10% 0;
 }
 
 main section:nth-of-type(2) {
-  background-color: var(--background-color-main);
+  background-color: var(--background-color-main2);
 }
 
 main section:nth-of-type(2) li{
@@ -132,7 +139,7 @@ main section:nth-of-type(2) li{
   }
 
 main section:nth-of-type(4) {
-    background-color: #ffeaf5 !important;
+    background-color: var(--background-color-main2);
     display: flex;
     flex-direction: column-reverse;
     padding-top: 10%;
@@ -140,7 +147,7 @@ main section:nth-of-type(4) {
 
 main section:nth-of-type(2) h2{
     color: #000000;
-    font-family:"archia-regular" ;
+    font-family:"archia-regular";
     font-weight: 300;
     padding-bottom: 1em;
     font-size: 103%;
@@ -155,11 +162,39 @@ main main section:nth-of-type(5){
 
 
 /* section 3 */
-main section:nth-of-type(3) img{
-    width: 50%;
+main section:nth-of-type(3) li img {
+    width: 100vw;
+    height: auto;
 }
+main section:nth-of-type(3){
+    padding: 0%;
+    margin: 0%;
+    height: 64dvw;
+}
+main section:nth-of-type(3) button img{
+    width: 9%;
+}
+/* main section:nth-of-type(3) li:nth-of-type(2) img {
+    width: 35%;
+}
+main section:nth-of-type(3) li:nth-of-type(3) img {
+    width: 35%;
+}
+main section:nth-of-type(3) li:nth-of-type(4) img {
+    width: 35%;
+}
+main section:nth-of-type(3) li:nth-of-type(5) img {
+    width: 35%;
+}
+main section:nth-of-type(3) li:nth-of-type(6) img {
+    width: 35%;
+}
+main section:nth-of-type(3) li:nth-of-type(7) img {
+    width: 35%;
+} */
 main section:nth-of-type(3) ul{
     display: flex;
+    flex-direction: row;
     overflow: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -167,6 +202,18 @@ main section:nth-of-type(3) ul{
     gap: 1em;
     scrollbar-width: thin;
     scrollbar-color: var(--color-background-pink) transparent;
+    padding: 0%;
+}
+main section:nth-of-type(3) li{
+    width: 100%;
+}
+main section:nth-of-type(3) button{
+position: absolute;
+z-index: 1;
+top: 203%;
+gap: 20em;
+display: flex;
+justify-content: center;
 }
 
 
@@ -205,15 +252,18 @@ main section:nth-of-type(4) ul{
 
 /* section 5 */
 main section:nth-of-type(5){
-    background-image: var(--background-image-main);
+    background-image: var(--background-img-main);
 }
 main section:nth-of-type(5) h2 strong:nth-of-type(1){
     position: absolute;
     background-color: #8004e1;
     font-weight: lighter;
     font-size: medium;
-    top: 145rem;
-    left: 4rem;
+    top: 157rem;
+    left: 7.5rem;
+    /* width: max-content;
+    display: flex;
+    margin: auto; */
     font-family: "chaney-wide";
 }
 main section:nth-of-type(5) h2 strong:nth-of-type(2){
@@ -222,22 +272,52 @@ main section:nth-of-type(5) h2 strong:nth-of-type(2){
     text-align: center;
     max-width: max-content;
     font-size: 1.4em;
-    /* top: 11rem; */
-    left: 5rem;
+    bottom: -109rem;
+    left: 6.5rem;
     font-family: "parking-regular";
 }
 main section:nth-of-type(5) p{
     width: 65%;
-    padding-top:20%;
+    padding:30% 0 10% 0;
     margin: auto;
 }
-main ol{
+/* main ol{
+    display: flex;
+    flex-direction: column;
+} */
+
+main section:nth-of-type(5) label, main section:nth-of-type(5) input{
     display: flex;
     flex-direction: column;
 }
 
+main section:nth-of-type(5) ol{
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+}
+main section:nth-of-type(5) input{
+    background-color: var(--color-white);
+    font-family:"archia-regular";
+    color: var(--color-text-black);
+    width: 85%;
+    color: var(--color-text-black);
+    padding: 3.5% 0;
+}
+main section:nth-of-type(5) label{
+    font-family:"archia-regular";
+}
+main section:nth-of-type(5) li:nth-of-type(6) label {
+    width: 80%;
+}
 
-
+main section:nth-of-type(5) button{
+    background-color: var(--background-color-black);
+    padding: 3% 5%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
 main input{
     background-color: var(--color-text-white);
 }

@@ -169,9 +169,9 @@ datum toevoegen
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - light-dark mode vraag voor buttons color-scheme gefixt 
+  - lettertype regular semi bold en  bold
+  - 
 - ...
 
 </details>
@@ -199,19 +199,30 @@ datum toevoegen
 <details>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+### Stand van zaken
+deze week ben ik verder gegaan mijn mijn light en dark mode. Ik had moeite met mijn gradient veranderen omdat het elke keer op 1 kleur bleef hangen. 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+Gloria
 
+- wanneer % en wanneer em gebruiken
+- h2 centreren bij gekleurde kopjes (doe het nu met left)
+- text animatie laten sliden met keyframes
+- padding 4 of 2 waardes
+
+Manon
+- blauwe rand van de focus weghalen
+- favorieten hartje op de party pagina verplaatsen
+- Surface plane, welke elementen, wat houdt elk ding percies in.
+ 
+Rosa 
+- graag padding gebruiken zonder padding
+
+Bob
+-Ik wil weten hoe ik de carousel op een correcte manier kan verwerken
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -261,8 +272,8 @@ datum toevoegen
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. bron 1 
+  2. [bron 2](https://www.freeconvert.com/video-compressor)
   3. ...
 
 </details>

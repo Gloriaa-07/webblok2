@@ -3,28 +3,41 @@
 /**************/
 
 :root {
+	/* startje */
+	color-scheme: light dark;
 	/* --color-background:  */
+	--color-text-black: black;
+	--color-white: white;
+	--color-header-button: white;
+	--color-p:light-dark(black, white);
 	--button-background: light-dark(black, white);
 	--background-color-button-footer: black;
 	--button-color: light-dark(white, black);
 	--background-color-black: black;
+	--color-border: light-dark(black, white);
 	--background-color-main: light-dark(#ffeaf5, #FF2EC5);
-	--background-image-main: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%);
-	--background-image-main2: #ffeaf5;
+	
+
+	--background-img-main:linear-gradient(180deg, #ff96d7 0%, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%);
+	--background-color-main2: #ffeaf5;
 	--color-background-pink: #FF4EB5;
 	--color-form-button: light-dark(black, white);
 	--color-form-button-border: light-dark(black black);
 	--color-background-purple: #8004e1;
 	/* --whitespace:clamp(0, 0em, 37em); */
+
+	/* --background-img-main: linear-gradient(180deg, #1b2a49 0%, #273c75 25%, #40739e 75%, #192a56 100%); */
 }
 
-html[data-theme='light']{
-	--background-image-main: linear-gradient(180deg, #ff96d7 0, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%);
+@media (prefers-color-scheme: dark){
+	:root{
+		color-scheme: light dark;
+		--background-img-main:linear-gradient(180deg,#1e0a28 0%,#3b0f45 35%,#521660 75%,#1e0a28 100%);
+		--color-background-pink: #5b2784; 
+		--background-color-main2:	#d7b5fc;
+	
+	}
 }
-html[data-theme='dark']{
-	--background-image-main: linear-gradient(180deg, #1b2a49 0%, #273c75 25%, #40739e 75%, #192a56 100%);
-}
-
 
 /* van:https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -127,12 +140,28 @@ header nav button {
 	flex-direction: column;
 	align-items: center;
 }
+header>a:last-of-type:hover{
+	animation-name: grootklein;
+	animation-duration:1s;
+	animation-iteration-count:5;
+}
+@keyframes grootklein {
+	0% {
+	  scale:1;
+	}
+	50% {
+	  scale:1.3;
+	}
+	100% {
+	  scale:1;
+	}
+  }
 
 header span {
 	display: block;
 	text-align: center;
 	font-family: "chaney-wide";
-	color: var(--color-text-white);
+	color: var(--color-white);
 
 }
 
@@ -153,9 +182,6 @@ button {
 	z-index: 1;
 }
 
-header a:nth-of-type(2) {
-	color: var(--color-text-black);
-}
 
 header li a {
 	font-family: "parking-regular";
@@ -238,7 +264,8 @@ button */
 } */
 
 header>a:last-of-type {
-	background-color: var(--color-text-white);
+	background-color: var(--color-header-button);
+	color: var(--color-text-black);
 	border-radius: 20em;
 	padding: 0.7em 0.7em 0.7em 0.7em;
 	margin-top: 0%;
@@ -247,9 +274,11 @@ header>a:last-of-type {
 	right: 4.5rem;
 	position: absolute;
 }
-
+header>a:last-of-type:hover{
+	background-color: var(--color-header-button);
+}
 header nav a {
-	color: var(--color-text-black);
+	color: var(--color-p);
 	font-size: 250%;
 }
 
@@ -336,7 +365,7 @@ footer img {
 } */
 footer section:nth-of-type(1) p {
 	font-family: "chaney-wide";
-	color: var(--color-text-black);
+	color: var(--color-p);
 	text-align: start;
 	margin: 0%;
 
@@ -399,14 +428,14 @@ footer section:nth-of-type(4) ul {
 
 footer section:nth-of-type(2) ul {
 	display: flex;
-	/* gap: 4%; */
+	gap: 4%;
 	padding: 10% 0;
 }
 
 footer h3,
 footer h2 {
 	font-family: "parking-regular";
-	color: var(--color-text-black);
+	color: var(	--color-p);
 	font-size: xx-large;
 	font-weight: lighter;
 	margin-bottom: 8%;
@@ -416,7 +445,7 @@ footer h2 {
 }
 
 footer section:nth-of-type(2) nav {
-	border-bottom: solid var(--color-text-black);
+	border-bottom: solid var(--color-border);
 	border-width: 0.1em;
 }
 
@@ -425,7 +454,7 @@ footer input {
 	appearance: none;
 	font: inherit;
 	width: 60%;
-	background-color: var(--color-text-white);
+	background-color: var(--color-white);
 	border-radius: 1.375em 0 0 1.375em;
 	padding: 0.6em 1em 0.6em 1em;
 	border: solid;
@@ -458,7 +487,7 @@ footer section:nth-of-type(1) button {
 	padding: 1.1em 1em 1em 1em;
 	border-width: medium;
 	background-color: var(--background-color-button-footer);
-	color: var(--color-text-white);
+	color: var(--color-white);
 	position: relative;
 	right: 2%;
 	width: 40%;
@@ -476,7 +505,7 @@ footer a {
 	/* width: 80%;
 	margin: auto; */
 	display: flex;
-	color: var(--color-text-black);
+	color: var(--color-p);
 }
 
 footer section:nth-of-type(4) p {
@@ -528,7 +557,7 @@ footer section:nth-of-type(4) {
 
 footer h4 {
 	font-family: "archia-bold";
-	color: var(--color-text-black);
+	color: var(--color-p);
 }
 
 footer section svg:nth-of-type(1) {
@@ -553,10 +582,8 @@ footer input {
 	animation-name:
 
 } */
-
-/* wanneer % en wanneer em gebruiken */
-/* background color werkt niet button bedrijf */
-/* p boven de input */
-/* procenten of em gebruiken? */
-/* juiste img selecteren pagina 2 */
-/* hoogte van een section */
+/* 
+wanneer % en wanneer em gebruiken
+h2 centreren bij gekleurde kopjes (doe het nu met left
+text animatie laten sliden met keyframes
+padding 4 of 2 waardes */
