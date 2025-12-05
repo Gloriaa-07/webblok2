@@ -7,6 +7,7 @@
 	color-scheme: light dark;
 	/* --color-background:  */
 	--color-text-black: black;
+	--test: blue;
 	--color-white: white;
 	--color-header-button: white;
 	--color-p:light-dark(black, white);
