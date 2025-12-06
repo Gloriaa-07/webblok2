@@ -129,9 +129,7 @@ main section>button:last-of-type ul:nth-of-type(1){
     background-color: var(--color-background-pink);
 }
 
-/* main section:nth-last-of-type(4) img {
-    animation-name: textslide;
-} */
+
 @keyframes textslide{
     0% {
         opacity: 0;
@@ -189,15 +187,14 @@ main section>button:last-of-type ul:nth-of-type(1){
 /**************/
 /* section 2*/
 /**************/
-main section:nth-of-type(2) a {
+main section:nth-of-type(2) li > a:last-of-type {
     background-color: var(--color-white);
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
     margin-top: 0%;
     color: var(--color-text-black);
     text-align: center;
-    display: inline-block;
-    order: 3;
+    order:3;
     width: max-content;
     transition: color .3s 
     ease 0s, background-color .3s 
@@ -210,15 +207,20 @@ main section:nth-of-type(2) ul {
     gap: 4em;
   padding:0;
 }
+main section:nth-of-type(2) a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-main section:nth-of-type(2) h3 {
+main section:nth-of-type(2) li > a:first-of-type {
     font-family: "parking-regular";
     font-size: 1.7em;
     color: var(--color-p);
     width: 80%;
     text-align: center;
     font-weight: 300;
-    order: 2;
+    order:2;
 }
 
 main section:nth-of-type(2) h3:hover {
@@ -234,6 +236,8 @@ main section h2 strong:nth-of-type(2) {
 
 main section:nth-of-type(2) {
     background-image: var(--background-img-main);
+    display: flex;
+	flex-direction: column;
 }
 
 main section:nth-of-type(2) li {
@@ -243,20 +247,40 @@ main section:nth-of-type(2) li {
     align-items: center;
 }
 
-main section:nth-of-type(2) img:last-of-type {
+
+
+
+
+
+main section:nth-of-type(2) > img{
     overflow-x: hidden;
-    animation-name: textslide;
     position: relative;
+    width: 800%;
 }
-main section:nth-of-type(2) a:hover{
+/* main section:nth-of-type(2) a:hover{
     background-color: var(--color-background-pink);
     color: var(--color-white);
     
+} */
+main section:nth-of-type(2) li > img{
+    width: 65%;
+    order:1;
+    transition:.3s 
+    ease 0s, .3s 
+    ease 0s;
 }
 
+main ul li img:hover {
+    cursor: pointer;
+transform:scale(1.1);
+}
 
-
-
+/**************/
+main section:nth-of-type(2) li > a:last-of-type:hover{
+    translate: 0 .5em;
+    background-color: var(--color-background-pink);
+    color: var(--color-white);
+}
 
 
 
@@ -287,8 +311,7 @@ main section:nth-of-type(3)>a:last-of-type {
     font-family: "chaney-wide";
 }
 main section:nth-of-type(3)>a:last-of-type:hover{
-    background-color: var(--color-background-pink);
-    translate: 0 .5em;
+    background-color: var(--color-background-pink); 
     color: var(--color-white);
     transition: color .3s 
     ease 0s, background-color .3s 
@@ -298,6 +321,7 @@ main section:nth-of-type(3)>a:last-of-type:hover{
 main section:nth-of-type(3) a {
     text-decoration: underline;
     font-family: "archia-regular";
+    /* color: var(--color-background-pink); */
 }
 
 main section:nth-of-type(3) {
@@ -496,6 +520,15 @@ main section:nth-of-type(5) a:last-of-type {
     text-align: center;
     width: max-content;
 }
+main section:nth-of-type(5) a:last-of-type:hover{
+    background-color: var(--color-background-pink);
+    /* translate: 0 .5em; */
+    color: var(--color-white);
+    transition: color .3s 
+    ease 0s, background-color .3s 
+    ease 0s;
+}
+
 
 main section:nth-of-type(5) {
     background-image: var(--background-img-main);
@@ -560,11 +593,11 @@ main section:nth-of-type(5) ul::scroll-marker-group {
 
 
 
-
-main a:hover {
+/* 
+main section:nth-of-type(2) a:hover {
     translate: 0 .5em;
     background-color: var(--color-background-pink);
-}
+} */
 
 
 
@@ -576,21 +609,39 @@ gap: 4%;
 /* section{
     gap: 10%;
 } */
-main ul li img {
-    width: 65%;
-    display: flex;
-    justify-content: center;
-    order: 1;
-    transition:.3s 
-    ease 0s, .3s 
-    ease 0s;
-    /* margin-bottom: 30%; */
-}
 
-main ul li img:hover {
-    cursor: pointer;
-transform:scale(1.1);
+/* toegankelijkheid */
+
+/* tekst animatie section 2 */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+/* https://www.youtube.com/watch?v=UmzFk68Bwdk */
+@media (prefers-reduced-motion: no-preference) {
+    main section:nth-of-type(2) > img:last-of-type {
+        animation-name: lefttoright;
+        animation-timeline: scroll(root);
+    }
 }
+@keyframes lefttoright{
+    to{
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+/* bij de video hoort er ook een @media (prefers-reduced-motion: no-preference), zodat de video uit gaat als iemand reduce motion aan heeft */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -656,5 +707,3 @@ section a:nth-of-type(1) {
 
 
 
-
-/* toevoegen dat de video uit gaat als iemand weinig motion wil in hun instellingen */

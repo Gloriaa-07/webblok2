@@ -186,6 +186,21 @@ button {
 
 header li a {
 	font-family: "parking-regular";
+	position: relative;
+	text-decoration: none;
+	outline: none;
+
+	background-image: linear-gradient(var(--color-text-black) 0 0);
+	background-size: 0% .15em;
+	transition: background-size .3s;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+
+header li a:hover{
+	background-size: 100% .15em;
+	background-position: left bottom;
 }
 
 header ul {
@@ -377,7 +392,7 @@ footer a {
 	text-decoration: none;
 	outline: none;
 
-	background-image: linear-gradient(var(--color-text-black) 00);
+	background-image: linear-gradient(var(--color-text-black) 0 0);
 	background-size: 0% .15em;
 	transition: background-size .3s;
 	background-position: right bottom;
@@ -390,7 +405,7 @@ footer address a:nth-of-type(1):hover {
 	background-position: left bottom;
 }
 
-footer address a:nth-of-type(2):hover {
+footer address a:nth-of-type(2):hover  {
 	background-size: 35% .15em;
 	background-position: left bottom;
 }

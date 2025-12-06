@@ -241,7 +241,19 @@ Bob
 ## Eindgesprek (week 5)
 
 <details>
-  <summary>uitwerken voor eindgesprek</summary>
+  <summary>
+  lijst surface plane elementen:
+  1. video (kan gepauzeerd worden)
+  2. Prefers-reduced-motion (bij text animatie)
+  3. Dom manipulatie (hamburger menu)
+  4. scroll animatie ( bij text section 2)
+  5. omvangrijkere formulieren
+  6. 
+  
+  
+  
+  
+  </summary>
 
   ### Je uitkomst - karakteristiek screenshots:
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
@@ -272,8 +284,9 @@ Bob
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1 
-  2. [bron 2](https://www.freeconvert.com/video-compressor)
-  3. ...
+  1. [bron 1] (a11yproject.com/posts/how-to-hide-content/)
+  2. [bron 2] (https://www.freeconvert.com/video-compressor)
+  3. [bron 3] (https://www.svgrepo.com/)
+  4. [bron 4] (https://www.youtube.com/watch?v=UmzFk68Bwdk)
 
 </details>
