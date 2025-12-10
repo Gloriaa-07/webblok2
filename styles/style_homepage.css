@@ -1,30 +1,12 @@
-/**************/
-/* Algemeen */
-/**************/
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-    margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 /**************/
 /* section 1*/
 /**************/
 
-/* h1 */
+main section:nth-of-type(1){
+    position: relative;
+}
+/* h1 styling*/
 section h1 {
     font-family: "chaney-wide";
 }
@@ -35,17 +17,17 @@ section h1 strong:nth-of-type(1) {
     color: var(--color-white);
     max-width: max-content;
     font-size: medium;
-    top: 11rem;
+    top: 10.5rem;
     left: 5rem;
 }
 
 section h1 strong:nth-of-type(2) {
     position: absolute;
-    background-color: var(--background-color-black);
+    background-color: var(--color-black);
     color: var(--color-white);
     font-weight: lighter;
     font-size: larger;
-    top: 12rem;
+    top: 11.7rem;
     font-family: "parking-regular";
     left: 5rem;
 }
@@ -57,25 +39,19 @@ main section:nth-of-type(1) img {
     left: 1rem;
 }
 
-main section:nth-of-type(1) p {
-    margin-top: 35%;
-    color: var(--color-text-black);
-}
-
+ /* bij de video hoort er ook een @media (prefers-reduced-motion: no-preference), zodat de video uit gaat als iemand reduce motion aan heeft  */
+/* video gecompressed om het op github te uploaden */
+/* (https://www.freeconvert.com/video-compressor) */
 section video {
     width: 100%;
     height: auto;
 }
 
-/* section:nth-of-type(1) {
-    
-} */
-
 main section:nth-of-type(1) div button img {
     width: 10%;
     position: absolute;
     top: 23%;
-    background-color: var(--color-background-pink);
+    background-color: var(--color-background-pink-purple);
     padding-top: 1%;
     padding-bottom: 1%;
     border-radius: 12%;
@@ -87,12 +63,13 @@ main section:nth-of-type(1) p {
     font-family: "archia-regular";
     text-align: center;
     margin: auto;
-    width: 50%;
-    padding-top: 30%;
+    width: 65%;
     line-height: 160%;
     font-size: large;
     color: var(--color-p);
+    padding: 35% 0 15%;
 }
+
 
 main section:nth-of-type(1) {
     position: relative;
@@ -105,17 +82,8 @@ main section h2 strong:nth-of-type(1) {
     text-align: center;
 }
 
-main section>button:last-of-type {
-    position: fixed;
-    bottom: 1rem;
-    right: 24em;
-    z-index: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-main section>button:last-of-type ul:nth-of-type(1){
+
+main section:nth-of-type(1)>button:last-of-type ul:nth-of-type(1){
     position: fixed;
     top: 0;
     bottom: 0;
@@ -126,55 +94,11 @@ main section>button:last-of-type ul:nth-of-type(1){
     gap: 1em;
     color: var(--color-text-black);
     padding-top: 30%;
-    background-color: var(--color-background-pink);
+    background-color: var(--color-background-pink-purple);
+    appearance: none;
 }
 
 
-@keyframes textslide{
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: .1;
-    }
-
-    20% {
-        opacity: .2;
-    }
-
-    30% {
-        opacity: .3;
-    }
-
-    40% {
-        opacity: .4;
-    }
-
-    50% {
-        opacity: .5;
-    }
-
-    60% {
-        opacity: .6;
-    }
-
-    70% {
-        opacity: .7;
-    }
-
-    80% {
-        opacity: .8;
-    }
-
-    90% {
-        opacity: .9;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 
 
@@ -196,8 +120,8 @@ main section:nth-of-type(2) li > a:last-of-type {
     text-align: center;
     order:3;
     width: max-content;
-    transition: color .3s 
-    ease 0s, background-color .3s 
+    transition: .3s 
+    ease 0s, .3s 
     ease 0s;
 }
 
@@ -223,9 +147,37 @@ main section:nth-of-type(2) li > a:first-of-type {
     order:2;
 }
 
+
+/* toegankelijkheid */
 main section:nth-of-type(2) h3:hover {
     cursor: pointer;
 }
+main section:nth-of-type(2) h3:active {
+color: var(--color-active);
+}
+main section:nth-of-type(2) h3:focus-visible{
+    outline-color:var(--color-white);
+	outline-style:solid;
+	outline-width:.15em;
+	outline-offset:.2em;
+}
+
+/* tekst animatie section 2 */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+/* https://www.youtube.com/watch?v=UmzFk68Bwdk */
+@media (prefers-reduced-motion: no-preference) {
+    main section:nth-of-type(2) > img:last-of-type {
+        animation-name: lefttoright;
+        animation-timeline:scroll(root);
+    }
+}
+/* animatie voor bewegende tekst bij scrollen */
+@keyframes lefttoright{
+    to{
+        transform: translate(calc(-50% - 1.3rem));
+    }
+}
+
 
 main section h2 strong:nth-of-type(2) {
     background-color: var(--color-text-black);
@@ -248,20 +200,12 @@ main section:nth-of-type(2) li {
 }
 
 
-
-
-
-
 main section:nth-of-type(2) > img{
     overflow-x: hidden;
     position: relative;
     width: 800%;
 }
-/* main section:nth-of-type(2) a:hover{
-    background-color: var(--color-background-pink);
-    color: var(--color-white);
-    
-} */
+
 main section:nth-of-type(2) li > img{
     width: 65%;
     order:1;
@@ -270,17 +214,32 @@ main section:nth-of-type(2) li > img{
     ease 0s;
 }
 
-main ul li img:hover {
+main section:nth-of-type(2) ul li img:hover {
     cursor: pointer;
 transform:scale(1.1);
 }
 
-/**************/
+/* toegankelijkheid */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+@media (prefers-reduced-motion: no-preference) {
+    main section:nth-of-type(2) ul li img:hover {
+        cursor: pointer;
+    transform:scale(1.1);
+    }  
+}
+
 main section:nth-of-type(2) li > a:last-of-type:hover{
     translate: 0 .5em;
-    background-color: var(--color-background-pink);
+}
+main section:nth-of-type(2) li > a:last-of-type:active{
+    background-color: var(--color-background-pink-purple);
     color: var(--color-white);
 }
+main section:nth-of-type(2) li > a:last-of-type:focus-visible{
+    outline-color: var(--outline-focus-color);
+    outline-width: 0.5em;
+}
+
 
 
 
@@ -309,17 +268,30 @@ main section:nth-of-type(3)>a:last-of-type {
     margin-top: 3em;
     text-decoration: none;
     font-family: "chaney-wide";
+    display: inline-block;
+    text-align: center;
 }
 main section:nth-of-type(3)>a:last-of-type:hover{
-    background-color: var(--color-background-pink); 
-    color: var(--color-white);
-    transition: color .3s 
-    ease 0s, background-color .3s 
-    ease 0s;
+    translate: 0 .5em;
+    cursor: pointer;
+    transition: .3s 
+ease 0s, .3s 
+ease 0s;
 }
 
-main section:nth-of-type(3) a {
-    text-decoration: underline;
+main section:nth-of-type(3)>a:last-of-type:active{
+    background-color: var(--color-background-pink-purple); 
+    color: var(--color-white);
+    transition: .3s 
+    ease 0s,  .3s 
+    ease 0s;
+}
+/* :focus-visible
+:active */
+
+
+main section:nth-of-type(3) p a {
+    /* text-decoration: underline; */
     font-family: "archia-regular";
     /* color: var(--color-background-pink); */
 }
@@ -351,9 +323,7 @@ main section:nth-of-type(3) img {
     display: flex;
     overflow-x: auto;
     flex-shrink: 0;
-    /* flex-grow: 1;
-    flex-direction: column;
-    scroll-snap-align: center; */
+   
 }
 
 
@@ -375,8 +345,6 @@ main section:nth-of-type(3) img {
 
 main section:nth-of-type(4) {
     background-color: var(--background-color-main2);
-    /* display: flex;
-    flex-direction: column-reverse; */
     padding-top: 10%;
 
 }
@@ -439,14 +407,8 @@ main section:nth-of-type(5) a {
     gap: 20%;
 }
 
-/* section:nth-of-type(1) img:last-child{
-    position: fixed;
-bottom: 1rem;
-} */
 
 main section:nth-of-type(5) {
-    /* display:flex;
-    justify-content: center; */
     text-align: center;
     height: 110%;
 }
@@ -479,7 +441,6 @@ main section:nth-of-type(5) h2 strong:nth-of-type(2) {
 }
 
 main section:nth-of-type(5) h2 strong:nth-of-type(1) {
-
     width: max-content;
     margin: auto;
 }
@@ -501,7 +462,7 @@ main section:nth-of-type(5)img {
 }
 
 
-main section:nth-of-type(5) a:first-of-type {
+main section:nth-of-type(5) a {
     background-color: var(--color-text-black);
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
@@ -511,7 +472,32 @@ main section:nth-of-type(5) a:first-of-type {
     margin-bottom: 7%;
 }
 
-main section:nth-of-type(5) a:last-of-type {
+/* toegankelijkheid */
+main section:nth-of-type(5) a:hover{
+    translate: 0 .5em;
+    transition: .3s 
+    ease 0s,  .3s 
+    ease 0s;
+}
+main section:nth-of-type(5) a:active{
+    background-color: var(--backgroud-color-button-white);
+    color: var(--color-text-black);
+}
+
+main section:nth-of-type(5)address a:hover{
+    translate: 0 .5em;
+    transition: .3s 
+    ease 0s, .3s 
+    ease 0s;
+}
+
+main section:nth-of-type(5) address a:active{
+    background-color: var(--color-background-pink-purple);
+    color: var(--color-white);
+}
+
+
+main section:nth-of-type(5) address a{
     background-color: var(--color-white);
     border-radius: 20em;
     padding: 1em 2em 1em 2em;
@@ -519,14 +505,7 @@ main section:nth-of-type(5) a:last-of-type {
     color: var(--color-text-black);
     text-align: center;
     width: max-content;
-}
-main section:nth-of-type(5) a:last-of-type:hover{
-    background-color: var(--color-background-pink);
-    /* translate: 0 .5em; */
-    color: var(--color-white);
-    transition: color .3s 
-    ease 0s, background-color .3s 
-    ease 0s;
+    font-style: normal;
 }
 
 
@@ -546,10 +525,21 @@ main section:nth-of-type(5) ul {
         scroll-snap-type:x mandatory;
         scroll-behavior:smooth;
         overscroll-behavior-x:contain;
-        gap:1em;
         scrollbar-width:thin;
-        scrollbar-color: var(--color-background-pink) transparent;
+        scrollbar-color: var(--color-background-pink-purple) transparent;
+        padding: 10% 2% 10%;
 }
+/* toegankelijkheid */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+@media (prefers-reduced-motion: no-preference) {
+    main section:nth-of-type(5) svg{
+        animation-name: slideinleft2;
+        animation-duration: 3s;
+        animation-iteration-count:infinite;
+    }
+}
+
+
 
 main section:nth-last-of-type(5) li{
     flex-basis:100%;
@@ -574,136 +564,6 @@ main section:nth-of-type(5) ul::scroll-marker-group {
 
 
 
-
-
-/* main{
-    display: flex;
-    flex-direction: column;
-    gap: 5em;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-main section:nth-of-type(2) a:hover {
-    translate: 0 .5em;
-    background-color: var(--color-background-pink);
-} */
-
-
-
-
-/* section:nth-of-type(1) p {
-gap: 4%;
-} */
-
-/* section{
-    gap: 10%;
-} */
-
-/* toegankelijkheid */
-
-/* tekst animatie section 2 */
-/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
-/* https://www.youtube.com/watch?v=UmzFk68Bwdk */
-@media (prefers-reduced-motion: no-preference) {
-    main section:nth-of-type(2) > img:last-of-type {
-        animation-name: lefttoright;
-        animation-timeline: scroll(root);
-    }
-}
-@keyframes lefttoright{
-    to{
-        transform: translate(calc(-50% - 0.5rem));
-    }
-}
-/* bij de video hoort er ook een @media (prefers-reduced-motion: no-preference), zodat de video uit gaat als iemand reduce motion aan heeft */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* section:nth-of-type(1) button svg{
-    position: relative;
-    position: absolute;
-    left: -15%;
-} */
-
-/* section h2 strong:nth-of-type(2) {
-    position: absolute;
-    background-color: black;
-font-weight: lighter;
-    font-size: larger;
-    top: 12rem;
-    font-family: "parking-regular";
-  left:5rem;
-} */
-/* footer */
-
-
-/* 
-section:nth-of-type(3) p {
-    font-family: "archia-regular";
-}
-
-section:nth-of-type(2) p {
-    font-family: "archia-regular";
-}
-
-section:nth-of-type(6) p {
-    font-family: "archia-regular";
-} */
-
-/* @media(max-width:20em){} */
-/* section:nth-of-type(1) > button:first-of-type {} */
-/* 
-section a:nth-of-type(1) {
-    background-color: black;
-    border-radius: 20em;
-    padding: 1em 2em 1em 2em;
-    margin-top: 0%;
-    color: white;
-    text-align: center;
-} */
-
-/* section:nth-of-type(2)a {
-    background-color: white;
-    border-radius: 20em;
-    padding: 1em 2em 1em 2em;
-    margin-top: 0%;
-    color: black;
-    text-align: center;
-} */
-
-/* section:nth-of-type(3) a{
-    text-decoration: underline;
-} */
-
-
-
-/* section 4 */
 
 
 

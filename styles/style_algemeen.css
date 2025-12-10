@@ -2,44 +2,62 @@
 /* Algemeen */
 /**************/
 
-:root {
-	/* startje */
-	color-scheme: light dark;
-	/* --color-background:  */
-	--color-text-black: black;
-	--test: blue;
-	--color-white: white;
-	--color-header-button: white;
-	--color-p:light-dark(black, white);
-	--button-background: light-dark(black, white);
-	--background-color-button-footer: black;
-	--button-color: light-dark(white, black);
-	--background-color-black: black;
-	--color-border: light-dark(black, white);
-	--background-color-main: light-dark(#ffeaf5, #FF2EC5);
-	
 
+/* custom properties */
+:root {
+	color-scheme: light dark;
+	/* tekst kleuren */
+	--color-text-black: black;
+	--color-text-white: white;
+	--color-p:light-dark(black, white);
+	
+	/* losse kleuren */
+	--color-white: white;
+	--color-black: black;
+
+	/* button kleuren */
+	--button-background: light-dark(black, white);
+	--button-color: light-dark(white, black);
+	--backgroud-color-button-white: white;
+	--backgroud-color-button-black: black;
+
+	/* achtergronds kleuren */
+	--color-background-purple: #8004e1;
 	--background-img-main:linear-gradient(180deg, #ff96d7 0%, #fdcbe5 20%, #fdcbe5 80%, #ff96d7 100%);
 	--background-color-main2: #ffeaf5;
-	--color-background-pink: #FF4EB5;
-	--color-form-button: light-dark(black, white);
-	--color-form-button-border: light-dark(black black);
-	--color-background-purple: #8004e1;
-	/* --whitespace:clamp(0, 0em, 37em); */
+	--color-background-pink-purple: #FF4EB5;
 
-	/* --background-img-main: linear-gradient(180deg, #1b2a49 0%, #273c75 25%, #40739e 75%, #192a56 100%); */
+	/* border kleur */
+	--color-border: light-dark(black, white);
+	/* --color-form-button-border:black; */
+	--color-valid: green;
+	--color-invalid:red;
+
+	/* active kleur */
+	--color-active: #FF4EB5;
+
+	/* extra's*/
+	--color-underline-hover: black;
+	--caret-color:#FF4EB5;
+	--outline-focus-color:#5b2784;
+	--svg-black-white:black;
 }
 
 @media (prefers-color-scheme: dark){
 	:root{
 		color-scheme: light dark;
 		--background-img-main:linear-gradient(180deg,#1e0a28 0%,#3b0f45 35%,#521660 75%,#1e0a28 100%);
-		--color-background-pink: #5b2784; 
-		--background-color-main2:	#d7b5fc;
-	
+		--color-active:#F69FDA;
+		--color-background-pink-purple: #5b2784; 
+		--background-color-main2:#d7b5fc;
+		--color-underline-hover:#FF4EB5;
+		--outline-focus-color:#ff4eb5;
+		--caret-color:#5b2784;
+		--svg-black-white:white;
 	}
 }
 
+/* voor screenreaders */
 /* van:https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
 	clip: rect(0 0 0 0);
@@ -51,14 +69,6 @@
 	width: 1px;
 }
 
-
-body {
-	overflow-x: hidden;
-}
-
-a {
-	font-family: "chaney-wide";
-}
 
 /* lettertypes */
 @font-face {
@@ -72,18 +82,8 @@ a {
 }
 
 @font-face {
-	font-family: "chaney-extended";
-	src: url(../fonts/chaney-extended.otf);
-}
-
-@font-face {
 	font-family: "chaney-wide";
 	src: url(../fonts/chaney-wide.otf);
-}
-
-@font-face {
-	font-family: "fa-brands";
-	src: url(../fonts/fa-brands-400.woff2);
 }
 
 @font-face {
@@ -91,6 +91,14 @@ a {
 	src: url(../fonts/parking-regular.otf);
 }
 
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+	font-family: "chaney-wide";
+}
 *,
 *::after,
 *::before {
@@ -98,20 +106,28 @@ a {
 	margin: 0;
 }
 
-/* @media{
-
-} */
 html {
 	scroll-behavior: smooth;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**************/
 /* Header*/
 /**************/
 
-
 header {
-	background-color: var(--color-background-pink);
+	background-color: var(--color-background-pink-purple);
 	height: 5em;
 	display: flex;
 	justify-content: space-between;
@@ -125,13 +141,23 @@ header nav button {
 	text-align: center;
 }
 
-
 header img {
 	width: 9.38em;
 	height: 3.4em;
 	padding-top: 1em;
+	z-index: 1;
+}
+
+/* logo in light en dark mode */
+@media (prefers-color-scheme: dark) {
+header img {
+	width: 9.38em;
+	height: 3.4em;
 	padding-top: 1em;
 	z-index: 1;
+	content: url(/images/logowondrtransparentdarkmode.png);
+
+	}
 }
 
 header nav button {
@@ -146,6 +172,17 @@ header>a:last-of-type:hover{
 	animation-duration:1s;
 	animation-iteration-count:5;
 }
+
+/* toegankelijkheid */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+@media (prefers-reduced-motion: no-preference) {
+	header>a:last-of-type:hover{
+		animation-name: grootklein;
+		animation-duration:1s;
+		animation-iteration-count:5;
+	}
+}
+/* animatie header button die van groot naar klein gaat */
 @keyframes grootklein {
 	0% {
 	  scale:1;
@@ -157,30 +194,31 @@ header>a:last-of-type:hover{
 	  scale:1;
 	}
   }
-
+ 
 header span {
 	display: block;
 	text-align: center;
 	font-family: "chaney-wide";
-	color: var(--color-white);
+	color: var(--color-p);
 
+}
+/* https://www.w3schools.com/graphics/svg_stroking.asp */
+/* svg stroke kende ik nog niet en fill werkte niet */
+header nav button svg path{
+	stroke: var(--svg-black-white);
 }
 
 header nav {
-	order: 10;
+	order: 2;
 }
 
-/* 
-button svg{
-	width: 50%;
-	z-index:1;
-}   */
 
 button {
 	background: none;
 	border: none;
-	padding: 0 0 0 0;
+	padding: 0;
 	z-index: 1;
+	appearance: none;
 }
 
 
@@ -189,18 +227,29 @@ header li a {
 	position: relative;
 	text-decoration: none;
 	outline: none;
-
-	background-image: linear-gradient(var(--color-text-black) 0 0);
 	background-size: 0% .15em;
 	transition: background-size .3s;
 	background-position: right bottom;
 	background-repeat: no-repeat;
 }
 
+/* toegankelijkheid */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+@media (prefers-reduced-motion: no-preference) {
+	header li a:hover{
+		background-size: 100% .15em;
+		background-position: left bottom;
+		background-image:linear-gradient(var(--color-underline-hover)0%, var(--color-underline-hover)100%);
+	}	
+}
 
 header li a:hover{
 	background-size: 100% .15em;
 	background-position: left bottom;
+	background-image:linear-gradient(var(--color-underline-hover)0%, var(--color-underline-hover)100%);
+}
+header li a:active{
+	color: var(--color-active);
 }
 
 header ul {
@@ -214,13 +263,15 @@ header ul {
 	gap: 1em;
 	color: var(--color-text-black);
 	padding-top: 30%;
-	background-color: var(--color-background-pink);
+	background-color: var(--color-background-pink-purple);
 
 }
 
+
+/* animatie voor slide in bij menu */
 @keyframes slideinleft {
 	from {
-		transform: translateX(300px);
+		transform: translateX(19em);
 	}
 
 	to {
@@ -228,10 +279,21 @@ header ul {
 	}
 }
 
+/* menu */
 nav.menuOpen ul {
 	translate: 0 0;
 	padding-left: 6%;
 
+}
+
+/* toegankelijkheid */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+@media (prefers-reduced-motion: no-preference) {
+	nav.menuOpen li {
+		animation-name: slideinleft;
+		animation-duration: 1s;
+	
+	}	
 }
 
 nav.menuOpen li {
@@ -245,9 +307,6 @@ nav li {
 	flex-grow: 0;
 }
 
-/* nav button{
-	display: none;
-} */
 
 li {
 	list-style-type: none;
@@ -258,52 +317,73 @@ a {
 }
 
 
-/* a:hover{
-background-color:var(--prefers-color-scheme);
-cursor: pointer;
-transform: scale(0.1px);
-}
-a:active{
-
-}
-a:focus-visible{
-
-}
-button */
-/* header a{
-	background-color: white;
-	border-radius: 20em;	
-} */
-
-/* header nav:last-child a, nav button{
-	flex-direction: row-reverse;
-} */
-
 header>a:last-of-type {
-	background-color: var(--color-header-button);
+	background-color: var(--backgroud-color-button-white);
 	color: var(--color-text-black);
 	border-radius: 20em;
-	padding: 0.7em 0.7em 0.7em 0.7em;
-	margin-top: 0%;
+	padding: 0.6em;
+	margin: 0% 0% 0% auto;
 	font-size: small;
 	text-align: center;
-	right: 4.5rem;
-	position: absolute;
 }
+
 header>a:last-of-type:hover{
-	background-color: var(--color-header-button);
+	background-color: var(--color-black);
+	color: var(--color-white);
 }
+header>a:last-of-type:active{
+	background:#FF4EB5;
+	color: var(--color-white);
+}
+a:focus-visible{
+	outline-offset: .2em;
+	outline-color: var(--outline-focus-color);
+    outline-width: 1em;
+}
+
+
 header nav a {
 	color: var(--color-p);
 	font-size: 250%;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**************/
 /* Main */
 /**************/
 
-
+/* cookie button */
+main section:nth-of-type(1)>button:last-of-type:hover{
+    cursor: pointer;
+}
+main section:nth-of-type(1) svg {
+    fill: var(--svg-black-white);
+    position: fixed;
+}
+main section:nth-of-type(1)>button:last-of-type {
+    bottom: 1rem;
+    left: 2rem;
+    top:4.5em;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 main section:nth-of-type(1) {
 	position: relative;
 }
@@ -319,13 +399,11 @@ main blockquote {
 	justify-content: center;
 	text-align: center;
 	color: var(--color-text-black);
-	/* margin-left: 12%;
- margin-right: 12%; */
 	font-weight: 300;
 	padding-bottom: 1em;
 	width: 70%;
 	margin: auto;
-	padding-bottom: 10%;
+	padding: 0 0 10%;
 
 }
 
@@ -334,13 +412,32 @@ main section:nth-of-type(4) h3 {
 	display: flex;
 	justify-content: center;
 	color: var(--color-text-black);
-	margin-bottom: 10%;
+	margin: 0 0 10% 0;
+}
+
+@keyframes slideinleft2 {
+	from {
+        transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(19em);
+	}
 }
 
 
-/* nav.menuOpen button svg {
-	content: url("https://assets.codepen.io/274456/ui-icon-cross.svg");
-} */
+/* h2 titel centreren */
+main section:nth-of-type(5) h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
 
 
 
@@ -348,7 +445,7 @@ main section:nth-of-type(4) h3 {
 /* footer */
 /****************/
 footer {
-	background-color: var(--color-background-pink);
+	background-color: var(--color-background-pink-purple);
 	display: flex;
 	flex-direction: column;
 }
@@ -358,17 +455,12 @@ footer>* {
 	margin: auto;
 }
 
-/* footer section:nth-of-type(3){
-	width: 80%;
-	margin: auto;
-} */
 footer ul,
 footer h3,
 footer nav {
 	margin: 0%;
 	padding: 0%;
 }
-
 footer img {
 	padding-top: 15%;
 	width: 80%;
@@ -376,9 +468,17 @@ footer img {
 	display: block;
 }
 
-/* footer section:nth-of-type(3) ul{
-	width: 0;
-} */
+/* logo verandert naar wi voo dark mode */
+@media (prefers-color-scheme: dark) {
+footer img {
+	padding-top: 15%;
+	width: 80%;
+	margin: auto;
+	display: block;
+	content: url(/images/logowondrtransparentdark2.png);
+}
+}
+
 footer section:nth-of-type(1) p {
 	font-family: "chaney-wide";
 	color: var(--color-p);
@@ -387,12 +487,28 @@ footer section:nth-of-type(1) p {
 
 }
 
-footer a {
+
+/* toegankelijkheid */
+/* zorgt ervoor dat de gebruiker de motion uit kan zetten */
+@media (prefers-reduced-motion: no-preference) {
+	footer a, main section:nth-of-type(3) p a{
+		position: relative;
+		text-decoration: none;
+		outline: none;
+		background-image:linear-gradient(var(--color-underline-hover)0%, var(--color-underline-hover)100%);
+		background-size: 0% .15em;
+		transition: background-size .3s;
+		background-position: right bottom;
+		background-repeat: no-repeat;
+	
+	}
+}
+
+footer a, main section:nth-of-type(3) p a{
 	position: relative;
 	text-decoration: none;
 	outline: none;
-
-	background-image: linear-gradient(var(--color-text-black) 0 0);
+	background-image:linear-gradient(var(--color-underline-hover)0%, var(--color-underline-hover)100%);
 	background-size: 0% .15em;
 	transition: background-size .3s;
 	background-position: right bottom;
@@ -400,6 +516,12 @@ footer a {
 
 }
 
+
+/* verschillende lengtes van de lijnen */
+main section:nth-of-type(3) p a:hover{
+	background-size: 100% .15em;
+	background-position: left bottom;
+}
 footer address a:nth-of-type(1):hover {
 	background-size: 70% .15em;
 	background-position: left bottom;
@@ -415,20 +537,35 @@ footer address a:nth-of-type(3):hover {
 	background-position: left bottom;
 }
 
-footer section:nth-of-type(3)a:nth-of-type(1):hover {
-	background-size: 30% .15em;
+
+/* verschillende lengtes van de lijnen */
+footer section:nth-of-type(3) nav ul li:nth-of-type(1) a:hover {
+	background-size: 28% .15em;
 	background-position: left bottom;
 }
 
-footer a:focus-visible {
-	outline: solid .15em var(--color-text-black);
-	outline-offset: .2em;
+footer section:nth-of-type(3) nav ul li:nth-of-type(2) a:hover {
+	background-size: 22% .15em;
+	background-position: left bottom;
+}
+footer section:nth-of-type(3) nav ul li:nth-of-type(3) a:hover {
+	background-size: 15% .15em;
+	background-position: left bottom;
+}
+footer section:nth-of-type(3) nav ul li:nth-of-type(4) a:hover {
+	background-size: 18% .15em;
+	background-position: left bottom;
 }
 
+footer section:nth-of-type(3) nav ul li:nth-of-type(5) a:hover {
+	background-size: 25% .15em;
+	background-position: left bottom;
+}
+
+
 footer a:active {
-	color: var(--roze);
-	background-image: linear-gradient(var(--background-image-main2));
-	outline-color: var(--color-background-purple);
+	color: var(--color-active);
+
 }
 
 footer li,
@@ -437,9 +574,10 @@ footer a {
 	padding: 0%;
 }
 
-footer section:nth-of-type(4) ul {
+footer section:nth-of-type(4) ul li a {
 	padding-bottom: 10%;
 	list-style-type: none;
+	
 }
 
 footer section:nth-of-type(2) ul {
@@ -451,13 +589,10 @@ footer section:nth-of-type(2) ul {
 footer h3,
 footer h2 {
 	font-family: "parking-regular";
-	color: var(	--color-p);
+	color: var(--color-p);
 	font-size: xx-large;
 	font-weight: lighter;
-	margin-bottom: 8%;
-	margin-top: 8%;
-	margin: 0%;
-	padding-bottom: 10%;
+	margin: 0.5em 0 1em 0;
 }
 
 footer section:nth-of-type(2) nav {
@@ -482,15 +617,16 @@ footer input {
 	font-family: "archia-regular";
 }
 
+/* toegankelijkheid */
+/* placeholder kleur donkerder gemaakt voor meer contrast */
 footer input::placeholder {
 	font-family: "archia-regular";
 	width: 100%;
 	font-size: medium;
+	color: var(--color-text-black);
 }
 
 footer form {
-	/* margin-bottom: 15%;
-	margin-top: 10%; */
 	display: flex;
 }
 
@@ -502,55 +638,51 @@ footer section:nth-of-type(1) button {
 	border-radius: 0 2em 2em 0;
 	padding: 1.1em 1em 1em 1em;
 	border-width: medium;
-	background-color: var(--background-color-button-footer);
+	background-color: var(--backgroud-color-button-black);
 	color: var(--color-white);
 	position: relative;
 	right: 2%;
 	width: 40%;
 }
 
+footer section:nth-of-type(1) button:hover{
+cursor: pointer;
+}
+footer section:nth-of-type(1) button:active{
+	background-color: var(--backgroud-color-button-white);
+    color: var(--color-text-black);
+}
+footer section:nth-of-type(1) button:focus-visible{
+	outline-offset: .2em;
+	outline-color: var(--outline-focus-color);
+    outline-width: 1em;
+	border-color: var(--color-black);
+}
+
 footer section:nth-of-type(1) p,
 footer section:nth-of-type(1) form {
-	/* gap:10%; */
 	padding-bottom: 10%;
 	font-size: larger;
 }
 
 footer a {
 	font-family: "archia-regular";
-	/* width: 80%;
-	margin: auto; */
 	display: flex;
 	color: var(--color-p);
+	font-size: large;
 }
 
 footer section:nth-of-type(4) p {
-	color: #666666;
 	font-family: "archia-regular";
-	margin-bottom: 10%;
+	font-size: small;
+	margin-bottom: 30%;
 }
 
-footer section:nth-of-type(4) ul:nth-of-type(1) a:first-of-type {
+footer address ul:nth-of-type(1) a:first-of-type {
 	text-decoration: underline;
-	/* padding-bottom: 10%; */
-
 }
 
-/* footer address{
-	display: flex;
-	flex-direction:column;
-padding-bottom: 2em;
-} */
-/* footer section:nth-of-type(2), footer address{
-	gap: 20%;
-} */
-/* footer section a:nth-of-type(1){
-	background-color: black;
-	border-radius: 100%;
-	width: 3em;
-	height: 3em;
-	display: inline-flex;
-} */
+
 footer section:nth-of-type(2) a {
 	background-color: var(--color-text-black);
 	border-radius: 100%;
@@ -558,48 +690,40 @@ footer section:nth-of-type(2) a {
 	height: 3em;
 	display: inline-flex;
 }
+footer a:focus-visible{
+	border-color: var(--color-text-white);
+}
 
-/* footer section:nth-of-type(3) svg{
-	margin-top: 18%;
-    margin-left: 19%;
-} */
 footer section:nth-of-type(2) ul {
 	display: flex;
 }
 
 footer section:nth-of-type(4) {
-	margin-top: 10%;
+	margin:14% auto auto auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em
+}
+footer section:nth-of-type(4) a{
+	font-size: small;
 }
 
 footer h4 {
 	font-family: "archia-bold";
 	color: var(--color-p);
+	font-size: large;
 }
 
 footer section svg:nth-of-type(1) {
-	margin-left: 19%;
-	margin-top: 20%;
+	margin-left: 24%;
+	margin-top: 23%;
 }
 
-address {
+footer address {
 	font-style: normal;
-	padding-top: 1em;
+	padding: 1em 0 3em 0;
+}
+footer address ul li a:nth-of-type(1){
+margin: 0 0 3em 0;
 }
 
-/* 
-footer input {
-    width: 60%;
-    border:var(--color-text-black);
-}
- */
-
-/* @keyframes section:thh {
-	transelate: 180deg;
-	animation-name:
-
-} */
-/* 
-wanneer % en wanneer em gebruiken
-h2 centreren bij gekleurde kopjes (doe het nu met left
-text animatie laten sliden met keyframes
-padding 4 of 2 waardes */
