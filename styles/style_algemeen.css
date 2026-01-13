@@ -95,6 +95,10 @@
 body {
 	overflow-x: hidden;
 }
+*{
+	padding: 0%;
+	margin: 0%;
+}
 
 a {
 	font-family: "chaney-wide";
@@ -142,18 +146,16 @@ header nav button {
 }
 
 header img {
-	width: 9.38em;
-	height: 3.4em;
-	padding-top: 1em;
+	width: 11em;
+	height: 3em;
 	z-index: 1;
 }
 
 /* logo in light en dark mode */
 @media (prefers-color-scheme: dark) {
 header img {
-	width: 9.38em;
-	height: 3.4em;
-	padding-top: 1em;
+	width: 11em;
+	height: 3em;
 	z-index: 1;
 	content: url(/images/logowondrtransparentdarkmode.png);
 
@@ -216,7 +218,6 @@ header nav {
 button {
 	background: none;
 	border: none;
-	padding: 0;
 	z-index: 1;
 	appearance: none;
 }
@@ -262,7 +263,7 @@ header ul {
 	transition: 0.5s;
 	gap: 1em;
 	color: var(--color-text-black);
-	padding-top: 30%;
+	padding: 30% 0 0 6%;
 	background-color: var(--color-background-pink-purple);
 
 }
@@ -282,8 +283,6 @@ header ul {
 /* menu */
 nav.menuOpen ul {
 	translate: 0 0;
-	padding-left: 6%;
-
 }
 
 /* toegankelijkheid */
@@ -372,17 +371,12 @@ main section:nth-of-type(1)>button:last-of-type:hover{
 }
 main section:nth-of-type(1) svg {
     fill: var(--svg-black-white);
-    position: fixed;
 }
 main section:nth-of-type(1)>button:last-of-type {
     bottom: 1rem;
-    left: 2rem;
-    top:4.5em;
+    left: 1rem;
     z-index: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
 }
 main section:nth-of-type(1) {
 	position: relative;
@@ -395,26 +389,23 @@ main section:nth-of-type(1)img {
 
 main blockquote {
 	font-family: "archia-regular";
-	display: flex;
-	justify-content: center;
 	text-align: center;
-	color: var(--color-text-black);
 	font-weight: 300;
-	padding-bottom: 1em;
 	width: 70%;
 	margin: auto;
-	padding: 0 0 10%;
 
 }
 
 main section:nth-of-type(4) h3 {
 	font-family: "archia-bold";
+}
+
+main blockquote, main section:nth-of-type(4) h3 {
 	display: flex;
 	justify-content: center;
 	color: var(--color-text-black);
-	margin: 0 0 10% 0;
+	padding: 0 0 10% 0;
 }
-
 @keyframes slideinleft2 {
 	from {
         transform: translateX(0);
@@ -425,6 +416,10 @@ main section:nth-of-type(4) h3 {
 	}
 }
 
+main section:nth-of-type(3) p a:hover{
+	background-size: 100% .15em;
+	background-position: left bottom;
+}
 
 /* h2 titel centreren */
 main section:nth-of-type(5) h2 {
@@ -441,12 +436,13 @@ main section:nth-of-type(5) h2 {
 
 
 
+
 /****************/
 /* footer */
 /****************/
 footer {
 	background-color: var(--color-background-pink-purple);
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 }
 
@@ -455,25 +451,16 @@ footer>* {
 	margin: auto;
 }
 
-footer ul,
-footer h3,
-footer nav {
-	margin: 0%;
-	padding: 0%;
-}
+
 footer img {
-	padding-top: 15%;
-	width: 80%;
-	margin: auto;
+padding: 10% 0 0;
 	display: block;
 }
 
 /* logo verandert naar wi voo dark mode */
 @media (prefers-color-scheme: dark) {
 footer img {
-	padding-top: 15%;
-	width: 80%;
-	margin: auto;
+	padding: 10% 0 0;
 	display: block;
 	content: url(/images/logowondrtransparentdark2.png);
 }
@@ -483,9 +470,9 @@ footer section:nth-of-type(1) p {
 	font-family: "chaney-wide";
 	color: var(--color-p);
 	text-align: start;
-	margin: 0%;
 
 }
+
 
 
 /* toegankelijkheid */
@@ -516,49 +503,15 @@ footer a, main section:nth-of-type(3) p a{
 
 }
 
-
-/* verschillende lengtes van de lijnen */
-main section:nth-of-type(3) p a:hover{
+footer address a:hover {
 	background-size: 100% .15em;
 	background-position: left bottom;
 }
-footer address a:nth-of-type(1):hover {
-	background-size: 70% .15em;
-	background-position: left bottom;
-}
-
-footer address a:nth-of-type(2):hover  {
-	background-size: 35% .15em;
-	background-position: left bottom;
-}
-
-footer address a:nth-of-type(3):hover {
-	background-size: 55% .15em;
-	background-position: left bottom;
-}
 
 
-/* verschillende lengtes van de lijnen */
-footer section:nth-of-type(3) nav ul li:nth-of-type(1) a:hover {
-	background-size: 28% .15em;
-	background-position: left bottom;
-}
 
-footer section:nth-of-type(3) nav ul li:nth-of-type(2) a:hover {
-	background-size: 22% .15em;
-	background-position: left bottom;
-}
-footer section:nth-of-type(3) nav ul li:nth-of-type(3) a:hover {
-	background-size: 15% .15em;
-	background-position: left bottom;
-}
-footer section:nth-of-type(3) nav ul li:nth-of-type(4) a:hover {
-	background-size: 18% .15em;
-	background-position: left bottom;
-}
-
-footer section:nth-of-type(3) nav ul li:nth-of-type(5) a:hover {
-	background-size: 25% .15em;
+footer section:nth-of-type(3) nav ul li a:hover {
+	background-size: 100% .15em;
 	background-position: left bottom;
 }
 
@@ -568,14 +521,9 @@ footer a:active {
 
 }
 
-footer li,
-footer a {
-	margin: 0%;
-	padding: 0%;
-}
 
 footer section:nth-of-type(4) ul li a {
-	padding-bottom: 10%;
+	padding: 0 0 10%;
 	list-style-type: none;
 	
 }
@@ -592,7 +540,7 @@ footer h2 {
 	color: var(--color-p);
 	font-size: xx-large;
 	font-weight: lighter;
-	margin: 0.5em 0 1em 0;
+	padding: 0.5em 0 1em 0;
 }
 
 footer section:nth-of-type(2) nav {
@@ -601,7 +549,6 @@ footer section:nth-of-type(2) nav {
 }
 
 footer input {
-	margin: 0%;
 	appearance: none;
 	font: inherit;
 	width: 60%;
@@ -661,7 +608,7 @@ footer section:nth-of-type(1) button:focus-visible{
 
 footer section:nth-of-type(1) p,
 footer section:nth-of-type(1) form {
-	padding-bottom: 10%;
+	padding: 0 0 10%;
 	font-size: larger;
 }
 
@@ -670,12 +617,13 @@ footer a {
 	display: flex;
 	color: var(--color-p);
 	font-size: large;
+	max-width: fit-content;
 }
 
 footer section:nth-of-type(4) p {
 	font-family: "archia-regular";
 	font-size: small;
-	margin-bottom: 30%;
+	padding: 0 0 30% 0;
 }
 
 footer address ul:nth-of-type(1) a:first-of-type {
@@ -686,7 +634,7 @@ footer address ul:nth-of-type(1) a:first-of-type {
 footer section:nth-of-type(2) a {
 	background-color: var(--color-text-black);
 	border-radius: 100%;
-	width: 3em;
+	min-width: 3em;
 	height: 3em;
 	display: inline-flex;
 }
@@ -715,8 +663,7 @@ footer h4 {
 }
 
 footer section svg:nth-of-type(1) {
-	margin-left: 24%;
-	margin-top: 23%;
+	margin: 23% 0 0 24%;
 }
 
 footer address {

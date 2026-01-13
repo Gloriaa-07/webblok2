@@ -293,10 +293,10 @@ Bob
   lijst surface plane elementen:
   1. video (kan gepauzeerd worden)
   2. Prefers-reduced-motion (bij animaties)
-  3. Dom manipulatie (hamburger menu)
-  4. scroll animatie ( bij text section 2)
-  5. omvangrijkere formulieren (footer en events pagina)
-  6. SVG (icons) stylen en animeren (home en events pagina)
+  3. scroll animatie ( bij text section 2)
+  4. Wat omvangrijkere formulieren met styling (events pagina)
+  5. SVG (icons) stylen en animeren (home en events pagina)
+  6. Animaties feedback/nadruk (events pagina)
   
   </summary>
 

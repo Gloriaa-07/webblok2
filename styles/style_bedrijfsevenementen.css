@@ -21,7 +21,6 @@ section h1 strong:nth-of-type(1) {
     max-width: max-content;
     font-size: 1.4em;
     top: 11rem;
-    margin: auto;
     font-family: "parking-regular";
 }
 
@@ -33,8 +32,10 @@ section h1 strong:nth-of-type(2) {
     max-width: max-content;
     font-size: 1.4em;
     top: 14rem;
-    margin: auto;
     font-family: "parking-regular";
+}
+section h1 strong:nth-of-type(1), section h1 strong:nth-of-type(2), section h1 strong:nth-of-type(3) {
+    margin: auto;
 }
 
 section h1 strong:nth-of-type(3) {
@@ -44,7 +45,6 @@ section h1 strong:nth-of-type(3) {
     font-weight: lighter;
     font-size: medium;
     top: 17.2rem;
-    margin: auto;
 }
 
 h1 strong {
@@ -56,16 +56,16 @@ h1 strong {
 main section:nth-of-type(1) {
     background-image: var(--background-img-main);
     height: 100dvh;
+    display: grid;
 }
 
 main section:nth-of-type(1) p {
-    margin-top: 15%;
     color: var(--color-p);
     display: flex;
     justify-content: center;
     width: 65%;
     margin: auto;
-    padding-bottom: 15%;
+    padding: 0 0 15% 0;
 }
 
 main p {
@@ -79,7 +79,7 @@ main p {
 main section:nth-of-type(1)>img:last-of-type {
     width: 15%;
     display: block;
-    margin: 6em auto 3em auto;
+    justify-self: center;
     animation-name: bounce;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -91,7 +91,6 @@ main section:nth-of-type(1)>img:last-of-type {
     main section:nth-of-type(1)>img:last-of-type {
         width: 15%;
         display: block;
-        margin: 6em auto 3em auto;
         animation-name: bounce;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -187,8 +186,6 @@ main section:nth-of-type(2) ul {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin: 0%;
-    padding: 10% 0;
 }
 
 main section:nth-of-type(2) {
@@ -199,7 +196,10 @@ main section:nth-of-type(4) {
     background-color: var(--background-color-main2);
     display: flex;
     flex-direction: column-reverse;
-    padding-top: 10%;
+}
+
+main section:nth-of-type(2) ul, main section:nth-of-type(4), main section:nth-of-type(2) h2{
+    padding: 10% 0 0 0;
 }
 
 main section:nth-of-type(2) h2 {
@@ -207,7 +207,6 @@ main section:nth-of-type(2) h2 {
     font-family: "archia-regular";
     font-weight: 300;
     font-size: 103%;
-    padding: 8% 0;
     display: flex;
     justify-content: center;
 }
@@ -239,8 +238,6 @@ main section:nth-of-type(3) li img {
 }
 
 main section:nth-of-type(3) {
-    padding: 0%;
-    margin: 0%;
     height: 64dvw;
 }
 
@@ -258,7 +255,6 @@ main section:nth-of-type(3) ul {
     overscroll-behavior-x: contain;
     scrollbar-width: thin;
     scrollbar-color: var(--color-background-pink) transparent;
-    padding: 0%;
 }
 
 main section:nth-of-type(3) li {
@@ -307,20 +303,17 @@ main section:nth-of-type(3) li {
 main section:nth-of-type(4) li {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 10%;
 }
 
 main section:nth-of-type(4) p {
     display: flex;
     justify-content: center;
-    padding-bottom: 10%;
+    padding: 0 0 10% 0;
     width: 50%;
     margin: auto;
 }
 
-main section:nth-of-type(4) ul {
-    padding: 0%;
-}
+
 
 
 
@@ -350,7 +343,6 @@ main section:nth-of-type(5) h2 strong:nth-of-type(1) {
     max-width: max-content;
     font-size: medium;
     top: 159rem;
-    margin: auto;
     font-family: "chaney-wide";
     color: var(--color-text-white);
 }
@@ -361,7 +353,6 @@ main section:nth-of-type(5) h2 strong:nth-of-type(2) {
     max-width: max-content;
     font-size: 1.9em;
     bottom: -111.6rem;
-    margin: auto;
     font-family: "parking-regular";
     color: var(--color-text-white);
 }
@@ -369,9 +360,10 @@ main section:nth-of-type(5) h2 strong:nth-of-type(2) {
 main section:nth-of-type(5) p:first-of-type {
     width: 65%;
     padding: 40% 0 10% 0;
+}
+main section:nth-of-type(5) h2 strong:nth-of-type(1), main section:nth-of-type(5) h2 strong:nth-of-type(2), main section:nth-of-type(5) p:first-of-type{
     margin: auto;
 }
-
 main section:nth-of-type(5) label,
 main section:nth-of-type(5) input {
     display: flex;
@@ -385,28 +377,56 @@ main section:nth-of-type(5) input:focus {
     border-width: 0.3em;
 }
 
-main section:nth-of-type(5) input:valid {
+/* chatgpt  */
+
+/* standaard icoon (leeg) */
+main section:nth-of-type(5)
+input:placeholder-shown {
+    background-image: var(--icon-default);
+}
+
+/* per input het standaard icoon */
+#first-name { --icon-default: url("/images/namebadge.png"); }
+#last-name  { --icon-default: url("/images/namebadge.png"); }
+#email      { --icon-default: url("/images/emailemoji.png"); }
+#phone      { --icon-default: url("/images/phoneemoji.png"); }
+#company-name {--icon-default: url("/images/companyemoji.png"); }
+#referral {--icon-default: url("/images/guestemoji.webp"); }
+#find-us { --icon-default: url("/images/findusemoji.webp"); } 
+
+/* valid */
+main section:nth-of-type(5)
+input:required:valid:not(:placeholder-shown) {
     border-color: var(--color-valid);
+    background-image: url("/images/valid.png");
 }
 
-main section:nth-of-type(5) input:invalid {
+/* invalid */
+main section:nth-of-type(5)
+input:required:invalid:not(:placeholder-shown) {
     border-color: var(--color-invalid);
+    background-image: url("/images/invalid.png");
 }
-
 
 main section:nth-of-type(5) ol {
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
+main section:nth-of-type(5) form{
+    width: 85%;
+}
 
+main section:nth-of-type(5) ol, main section:nth-of-type(5) form {
+    margin: auto;
+}
 main section:nth-of-type(5) input {
     background-color: var(--color-white);
     font-family: "archia-regular";
     color: var(--color-text-black);
-    width: 85%;
+    width: 90%;
     color: var(--color-text-black);
-    padding: 3.5%;
+    padding: 3.5% 3.5% 3.5% 3em;
     appearance: none;
     border-color: var(--color-black);
     caret-color: var(--caret-color);
@@ -438,17 +458,44 @@ main section:nth-of-type(5) label {
     font-family: "archia-regular";
 }
 
-main section:nth-of-type(5) li:nth-of-type(6) label {
-    width: 80%;
+
+
+input {
+	background-size:1.5em auto;
+	background-repeat:no-repeat;
+	background-position:.5em center;
+	padding: 0 0 0 2.5em;
 }
 
-main section:nth-of-type(5) button {
-    background-color: var(--backgroud-color-button-black);
-    padding: 3% 5%;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-bottom: 10%;
-    cursor: pointer;
+/* main section:nth-of-type(5)
+input:placeholder-shown {
+    background-image: var(--icon-default);
+} */
+
+
+/* #first-name, #last-name {
+    background-image: url("/images/namebadge.png");
+}
+
+#email {
+    background-image: url("/images/emailemoji.png");
+}
+
+#phone {
+    background-image: url("/images/phoneemoji.png");
+}
+#company-name {
+    background-image: url("/images/companyemoji.png");
+}
+
+#referral {
+    background-image: url("/images/guestemoji.webp");
+}
+#find-us {
+    background-image: url("/images/findusemoji.webp");
+} */
+main section:nth-of-type(5) li:nth-of-type(6) label {
+    width: 80%;
 }
 
 main section:nth-of-type(5) button:active{
@@ -460,19 +507,15 @@ main input {
     background-color: var(--color-text-white);
 }
 
-main li p {
-    margin-left: 0;
-}
 
 main section:nth-of-type(5) form button {
-    background-color: var(--color-text-black);
-    margin-top: 0%;
     color: var(--color-text-white);
     text-align: center;
     width: max-content;
     font-family: "archia-regular";
     padding: 1em 2em 1em 2em;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin: 10% 0  0 0;
     border-radius: 10%;
+    background-color: var(--backgroud-color-button-black);
+    cursor: pointer;
 }
