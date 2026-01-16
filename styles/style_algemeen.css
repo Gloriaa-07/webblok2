@@ -392,19 +392,17 @@ main blockquote {
 	text-align: center;
 	font-weight: 300;
 	width: 70%;
-	margin: auto;
-
+	grid-column:2/3;
+    justify-self: center;
 }
 
 main section:nth-of-type(4) h3 {
 	font-family: "archia-bold";
+	justify-self: center;
 }
 
 main blockquote, main section:nth-of-type(4) h3 {
-	display: flex;
-	justify-content: center;
 	color: var(--color-text-black);
-	padding: 0 0 10% 0;
 }
 @keyframes slideinleft2 {
 	from {
@@ -523,8 +521,8 @@ footer a:active {
 
 
 footer section:nth-of-type(4) ul li a {
-	padding: 0 0 10%;
 	list-style-type: none;
+	line-height: 350%;
 	
 }
 
@@ -540,7 +538,7 @@ footer h2 {
 	color: var(--color-p);
 	font-size: xx-large;
 	font-weight: lighter;
-	padding: 0.5em 0 1em 0;
+	line-height: 300%;
 }
 
 footer section:nth-of-type(2) nav {
@@ -647,7 +645,6 @@ footer section:nth-of-type(2) ul {
 }
 
 footer section:nth-of-type(4) {
-	margin:14% auto auto auto;
     display: flex;
     flex-direction: column;
     gap: 2.5em
@@ -668,7 +665,6 @@ footer section svg:nth-of-type(1) {
 
 footer address {
 	font-style: normal;
-	padding: 1em 0 3em 0;
 }
 footer address ul li a:nth-of-type(1){
 margin: 0 0 3em 0;

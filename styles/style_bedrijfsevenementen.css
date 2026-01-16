@@ -1,9 +1,40 @@
 /**************/
 /* section 1*/
 /**************/
+main section:nth-of-type(1) {
+    background-image: var(--background-img-main);
+    height: 100dvh;
+    display: grid;
+      grid-template-rows: 
+      0.5em
+      10em
+      10em
+      5em;
+    grid-template-columns:
+    5% 90% 5%;
+    position: relative;
+}
+/* 
+main section:nth-of-type(1){
+    background-image: var(--background-img-main);
+    display: grid;
+    hier heb ik een extra rij toegevoegd om de h1 wat te laten uitsteken
+    grid-template-rows: 
+        1fr de video en de h1
+        1em de h1
+        9em wondr 
+        max-content de p
+        5em; witruimte tot volgende section
+    grid-template-columns:calc(40% - 4em) 1fr;
+    position: relative;
+} */
 
-main section:nth-of-type(1) img {
+
+
+main section:nth-of-type(1) img:nth-of-type(1) {
     width: 100%;
+    grid-row:1/2;
+    grid-column:1/-1;
 }
 
 /* h1 */
@@ -12,60 +43,40 @@ section h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
+    grid-row:3/4;
+    grid-column:2/3;
 }
 
 section h1 strong:nth-of-type(1) {
-    position: absolute;
     background-color: black;
     color: var(--color-white);
-    max-width: max-content;
     font-size: 1.4em;
-    top: 11rem;
     font-family: "parking-regular";
 }
 
 section h1 strong:nth-of-type(2) {
-    position: absolute;
     background-color: black;
     color: var(--color-white);
     text-align: center;
     max-width: max-content;
     font-size: 1.4em;
-    top: 14rem;
     font-family: "parking-regular";
-}
-section h1 strong:nth-of-type(1), section h1 strong:nth-of-type(2), section h1 strong:nth-of-type(3) {
-    margin: auto;
 }
 
 section h1 strong:nth-of-type(3) {
-    position: absolute;
     background-color: #8004e1;
     color: var(--color-white);
     font-weight: lighter;
     font-size: medium;
-    top: 17.2rem;
 }
 
-h1 strong {
-    display: flex;
-    flex-direction: column;
-}
-
-/* achtergrond */
-main section:nth-of-type(1) {
-    background-image: var(--background-img-main);
-    height: 100dvh;
-    display: grid;
-}
 
 main section:nth-of-type(1) p {
     color: var(--color-p);
-    display: flex;
-    justify-content: center;
-    width: 65%;
-    margin: auto;
-    padding: 0 0 15% 0;
+    grid-row:4/5;
+    grid-column:2/3;
+    justify-self: center;
 }
 
 main p {
@@ -119,9 +130,11 @@ main section:nth-of-type(1) a {
     padding: 1em 2em 1em 2em;
     color: var(--color-text-black);
     text-align: center;
-    display: block;
-    margin: auto;
     width: max-content;
+    height: max-content;
+    justify-self: center;
+    grid-row:5/6;
+    grid-column:2/3;
 }
 
 main section:nth-of-type(1) a:hover {
@@ -198,9 +211,9 @@ main section:nth-of-type(4) {
     flex-direction: column-reverse;
 }
 
-main section:nth-of-type(2) ul, main section:nth-of-type(4), main section:nth-of-type(2) h2{
+/* main section:nth-of-type(2) ul, main section:nth-of-type(4), main section:nth-of-type(2) h2{
     padding: 10% 0 0 0;
-}
+} */
 
 main section:nth-of-type(2) h2 {
     color: #000000;
@@ -308,7 +321,7 @@ main section:nth-of-type(4) li {
 main section:nth-of-type(4) p {
     display: flex;
     justify-content: center;
-    padding: 0 0 10% 0;
+    /* padding: 0 0 10% 0; */
     width: 50%;
     margin: auto;
 }
@@ -328,19 +341,30 @@ main section:nth-of-type(4) p {
 /**************/
 main section:nth-of-type(5) {
     background-image: var(--background-img-main);
+    display: grid;
+      grid-template-rows:
+      2em
+      6em
+      9em
+      48em
+      5em
+      8em; 
+    grid-template-columns:1fr 6fr 1fr;
+    position: relative;
 }
 main section:nth-of-type(5) h2 {
+    white-space: nowrap;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    grid-row:2/3;
+    grid-column:2/3;
 }
 
 main section:nth-of-type(5) h2 strong:nth-of-type(1) {
-    position: absolute;
     background-color: #8004e1;
     font-weight: lighter;
-    max-width: max-content;
     font-size: medium;
     top: 159rem;
     font-family: "chaney-wide";
@@ -348,9 +372,7 @@ main section:nth-of-type(5) h2 strong:nth-of-type(1) {
 }
 
 main section:nth-of-type(5) h2 strong:nth-of-type(2) {
-    position: absolute;
     background-color: black;
-    max-width: max-content;
     font-size: 1.9em;
     bottom: -111.6rem;
     font-family: "parking-regular";
@@ -358,12 +380,13 @@ main section:nth-of-type(5) h2 strong:nth-of-type(2) {
 }
 
 main section:nth-of-type(5) p:first-of-type {
-    width: 65%;
-    padding: 40% 0 10% 0;
+    justify-self: center;
+    grid-row:3/4;
+    grid-column:2/3;
 }
-main section:nth-of-type(5) h2 strong:nth-of-type(1), main section:nth-of-type(5) h2 strong:nth-of-type(2), main section:nth-of-type(5) p:first-of-type{
-    margin: auto;
-}
+
+
+
 main section:nth-of-type(5) label,
 main section:nth-of-type(5) input {
     display: flex;
@@ -414,12 +437,11 @@ main section:nth-of-type(5) ol {
     gap: 2em;
 }
 main section:nth-of-type(5) form{
-    width: 85%;
+    justify-self: flex-start;
+    grid-row:4/5;
+    grid-column:2/3;
 }
 
-main section:nth-of-type(5) ol, main section:nth-of-type(5) form {
-    margin: auto;
-}
 main section:nth-of-type(5) input {
     background-color: var(--color-white);
     font-family: "archia-regular";
@@ -448,9 +470,10 @@ main section:nth-of-type(5) p img {
 
 main section:nth-of-type(5) p:last-of-type {
     width: 70%;
-    padding: 10% 0 10% 0;
-    margin: auto;
+    justify-self: center;
     font-size: medium;
+    grid-row:6/7;
+    grid-column:2/3;
 }
 
 
@@ -464,7 +487,6 @@ input {
 	background-size:1.5em auto;
 	background-repeat:no-repeat;
 	background-position:.5em center;
-	padding: 0 0 0 2.5em;
 }
 
 /* main section:nth-of-type(5)
@@ -507,15 +529,18 @@ main input {
     background-color: var(--color-text-white);
 }
 
-
+main section:nth-of-type(5) form {
+    display: grid;
+}
 main section:nth-of-type(5) form button {
     color: var(--color-text-white);
     text-align: center;
     width: max-content;
     font-family: "archia-regular";
     padding: 1em 2em 1em 2em;
-    margin: 10% 0  0 0;
     border-radius: 10%;
     background-color: var(--backgroud-color-button-black);
     cursor: pointer;
+    grid-row:5/6;
+    grid-column:1/2;
 }

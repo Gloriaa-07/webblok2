@@ -5,7 +5,7 @@ const menuButton = document.querySelector("header button");
 const deNav = document.querySelector("header nav");
 
 // video button
-const deVideoButton = document.querySelector("section:nth-of-type(1) div button");
+const deVideoButton = document.querySelector("section:nth-of-type(1) button");
 const deVideo = document.querySelector("video");
 const deVideoButtonImg = document.querySelector("main button img");
 menuButton.onclick = toggleMenu;
