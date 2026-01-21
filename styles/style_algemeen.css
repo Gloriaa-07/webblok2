@@ -374,9 +374,19 @@ main section:nth-of-type(1) svg {
 }
 main section:nth-of-type(1)>button:last-of-type {
     bottom: 1rem;
-    left: 1rem;
+    left: 0.5rem;
     z-index: 1;
     position: fixed;
+	margin:1em;
+
+    width: 4em;
+    height: 4em;
+
+    background-color: var(--color-background-pink-purple);
+    border-radius: 12%;
+    opacity: 0.8;
+    display:grid;
+    place-items:center;
 }
 main section:nth-of-type(1) {
 	position: relative;
@@ -388,12 +398,20 @@ main section:nth-of-type(1)img {
 }
 
 main blockquote {
-	font-family: "archia-regular";
+	/* font-family: "archia-regular";
 	text-align: center;
 	font-weight: 300;
 	width: 70%;
 	grid-column:2/3;
-    justify-self: center;
+    justify-self: center; */
+	font-family: "archia-regular";
+    text-align: center;
+    font-weight: 300;
+    /* width: 70%; */
+    grid-column: 2 / 3;
+    /* justify-self: center; */
+    max-width: 20em;
+    line-height: 2;
 }
 
 main section:nth-of-type(4) h3 {
@@ -440,34 +458,69 @@ main section:nth-of-type(5) h2 {
 /****************/
 footer {
 	background-color: var(--color-background-pink-purple);
-	display: inline-flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 8% 80% 12%;
+	grid-template-rows: 
+	4em
+	max-content
+	1em
+	max-content
+	max-content
+	max-content
+	max-content
+	max-content
+	5em;
 }
 
-footer>* {
-	width: 80%;
-	margin: auto;
+footer picture {
+grid-column:2/3;
+grid-row:2/3 ;
+}
+
+footer picture img {
+	width: 70%;
+}
+
+footer section:nth-of-type(1) {
+	grid-row: 4/5;
+}
+footer section:nth-of-type(2) {
+	grid-row: 5/6;
+}
+footer section:nth-of-type(4) {
+	grid-row: 7/8;
+}
+footer section:nth-of-type(5) {
+	grid-row: 8/9;
 }
 
 
-footer img {
-padding: 10% 0 0;
-	display: block;
+footer section:nth-of-type(1) h2{
+	display: grid;
+	grid-column:2/3;
+grid-row:3/4 ;
 }
 
 /* logo verandert naar wi voo dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 footer img {
-	padding: 10% 0 0;
-	display: block;
-	content: url(/images/logowondrtransparentdark2.png);
-}
-}
+	width: 70%;
+grid-column:2/3;
+grid-row:2/3 ;
+content: url(/images/logowondrtransparentdark2.png);
+} */
+
 
 footer section:nth-of-type(1) p {
 	font-family: "chaney-wide";
 	color: var(--color-p);
 	text-align: start;
+	grid-column:2/3;
+	grid-row:3/4 ;
+
+}
+footer section{
+	grid-column:2/3;
 
 }
 
@@ -501,14 +554,14 @@ footer a, main section:nth-of-type(3) p a{
 
 }
 
-footer address a:hover {
+footer section:nth-of-type(3) a:hover {
 	background-size: 100% .15em;
 	background-position: left bottom;
 }
 
 
 
-footer section:nth-of-type(3) nav ul li a:hover {
+footer section:nth-of-type(5) nav ul li a:hover {
 	background-size: 100% .15em;
 	background-position: left bottom;
 }
@@ -520,7 +573,7 @@ footer a:active {
 }
 
 
-footer section:nth-of-type(4) ul li a {
+footer section:nth-of-type(5) ul li a {
 	list-style-type: none;
 	line-height: 350%;
 	
@@ -529,7 +582,6 @@ footer section:nth-of-type(4) ul li a {
 footer section:nth-of-type(2) ul {
 	display: flex;
 	gap: 4%;
-	padding: 10% 0;
 }
 
 footer h3,
@@ -604,9 +656,8 @@ footer section:nth-of-type(1) button:focus-visible{
 	border-color: var(--color-black);
 }
 
-footer section:nth-of-type(1) p,
 footer section:nth-of-type(1) form {
-	padding: 0 0 10%;
+	padding: 5% 0 10%;
 	font-size: larger;
 }
 
@@ -618,13 +669,12 @@ footer a {
 	max-width: fit-content;
 }
 
-footer section:nth-of-type(4) p {
+footer section:nth-of-type(5) p {
 	font-family: "archia-regular";
 	font-size: small;
-	padding: 0 0 30% 0;
 }
 
-footer address ul:nth-of-type(1) a:first-of-type {
+footer section:nth-of-type(3) ul:nth-of-type(1) a:first-of-type {
 	text-decoration: underline;
 }
 
@@ -634,22 +684,25 @@ footer section:nth-of-type(2) a {
 	border-radius: 100%;
 	min-width: 3em;
 	height: 3em;
-	display: inline-flex;
+	/* display: inline-flex; */
+	display: grid;
+	grid-template-columns: 21% 79%;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 footer a:focus-visible{
 	border-color: var(--color-text-white);
 }
 
 footer section:nth-of-type(2) ul {
-	display: flex;
+	padding: 0 0 2em 0;
 }
 
-footer section:nth-of-type(4) {
+footer section:nth-of-type(5) {
     display: flex;
     flex-direction: column;
     gap: 2.5em
 }
-footer section:nth-of-type(4) a{
+footer section:nth-of-type(5) a{
 	font-size: small;
 }
 
@@ -660,13 +713,29 @@ footer h4 {
 }
 
 footer section svg:nth-of-type(1) {
-	margin: 23% 0 0 24%;
+	grid-column: 2/3;
+	grid-row: 2/3;
+
+}
+/* footer section:nth-of-type(3){
+	display: grid;
+} */
+
+footer section:nth-of-type(3) {
+	grid-row: 6/7;
+}
+footer section:nth-of-type(3) address{
+	font-style: normal;
+
 }
 
-footer address {
-	font-style: normal;
+footer section:nth-of-type(3) address strong{
+	font-family: "archia-bold";
+    color: var(--color-p);
+    font-size: large;
 }
-footer address ul li a:nth-of-type(1){
+
+footer section:nth-of-type(3) ul li a:nth-of-type(1){
 margin: 0 0 3em 0;
 }
 

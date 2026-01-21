@@ -10,7 +10,8 @@ main section:nth-of-type(1){
     grid-template-rows: 
         1fr /* de video en de h1 */
         1em /* de h1 */
-        9em /* wondr*/ 
+        max-content /* wondr*/ 
+        5em/* witruimte tot volgende section */
         max-content /* de p */
         5em; /* witruimte tot volgende section */
     grid-template-columns:calc(40% - 4em) 1fr;
@@ -139,19 +140,14 @@ main section:nth-of-type(1) p {
     max-width:32em; /* niet breder dan 32 em */
     /* grid-column: 2/3; */
     grid-column:1/-1; /* hele breedte volgens mij */
+    grid-row:5/6;
     justify-self: center; /* in het midden van de 2 kolommen */
     line-height: 160%;
     font-size: large; /* dat is ouderwets - beter om em te gebruiken */
     color: var(--color-p);
 }
 
-/* 
-main section:nth-of-type(1) {
-    background-image: var(--background-img-main);
-    display: grid;
-    grid-template-rows: 1fr max-content max-content 1em max-content;
-    grid-template-columns: calc(50% -4em) 1fr;
-} */
+
 
 
 main section h2 strong:nth-of-type(1) {
@@ -171,7 +167,6 @@ main section:nth-of-type(1)>button:last-of-type ul:nth-of-type(1){
     transition: 0.5s;
     gap: 1em;
     color: var(--color-text-black);
-    padding: 30% 0 0;
     background-color: var(--color-background-pink-purple);
     appearance: none;
 }
@@ -244,7 +239,7 @@ main section:nth-of-type(2) h3:focus-visible{
 @media (prefers-reduced-motion: no-preference) {
     main section:nth-of-type(2) > img:last-of-type {
         animation-name: lefttoright;
-        animation-timeline:scroll(root);
+        animation-timeline: scroll(root);
     }
 }
 /* animatie voor bewegende tekst bij scrollen */
@@ -438,6 +433,11 @@ main section:nth-of-type(3) img {
 main section:nth-of-type(4) {
     background-color: var(--background-color-main2);
     display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    position: relative;
+}
+    /* background-color: var(--background-color-main2);
+    display: grid;
     grid-template-rows: 
         5em
         5em
@@ -449,17 +449,28 @@ main section:nth-of-type(4) {
         5em
         5em; 
     grid-template-columns:2fr 6fr 2fr;
-position: relative;
-}
+position: relative; */
+
 
 
 main section:nth-of-type(4) ul{
-    grid-column:2/3;
+    /* grid-column:2/3;
+    justify-self: center; */
+    grid-column: 2 / 3;
     justify-self: center;
+    display: flex;
+    gap: 4em;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 0;
 }
 main section:nth-of-type(4) li {
+    /* display: flex;
+    flex-direction: column-reverse; */
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+    gap: 1em;
 }
 
 
@@ -674,7 +685,7 @@ main section:nth-of-type(5) li{
     display:flex;
     align-items: flex-end;
 }
-main section:nth-of-type(5) ul::scroll-marker-group {
+main section:nth-of-type(5) ul::scroll-marker-group{
     height:3em;
     display: flex;
     justify-content:center;
