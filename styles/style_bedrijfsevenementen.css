@@ -358,12 +358,14 @@ main section:nth-of-type(5) {
     background-image: var(--background-img-main);
     display: grid;
       grid-template-rows:
-      2em
-      6em
-      9em
-      48em
-      5em
-      8em; 
+      2em /* 1/2 */
+      max-content/* 2/3 */
+      1em /* 3/4 */
+      max-content/* 4/5 */
+      3em/* 5/6 */
+      max-content/* 6/7 */
+      4em/* 7/8 */
+  8em/* 8/9 */; 
     grid-template-columns:1fr 6fr 1fr;
     position: relative;
 }
@@ -394,7 +396,7 @@ main section:nth-of-type(5) h2 strong:nth-of-type(2) {
 
 main section:nth-of-type(5) p:first-of-type {
     justify-self: center;
-    grid-row:3/4;
+    grid-row:4/5;
     grid-column:2/3;
 }
 
@@ -413,7 +415,7 @@ main section:nth-of-type(5) input:focus {
     border-width: 0.3em;
 }
 
-/* chatgpt  */
+
 
 /* standaard icoon (leeg) */
 main section:nth-of-type(5)
@@ -421,6 +423,8 @@ input:placeholder-shown {
     background-image: var(--icon-default);
 }
 
+/* chatgpt */
+/* https://chatgpt.com */
 /* per input het standaard icoon */
 #first-name { --icon-default: url("/images/namebadge.png"); }
 #last-name  { --icon-default: url("/images/namebadge.png"); }
@@ -451,7 +455,7 @@ main section:nth-of-type(5) ol {
 }
 main section:nth-of-type(5) form{
     justify-self: flex-start;
-    grid-row:4/5;
+    grid-row:6/7;
     grid-column:2/3;
 }
 
@@ -485,7 +489,7 @@ main section:nth-of-type(5) p:last-of-type {
     width: 70%;
     justify-self: center;
     font-size: medium;
-    grid-row:6/7;
+    grid-row:8/9;
     grid-column:2/3;
 }
 
@@ -542,9 +546,6 @@ main input {
     background-color: var(--color-text-white);
 }
 
-main section:nth-of-type(5) form {
-    display: grid;
-}
 main section:nth-of-type(5) form button {
     color: var(--color-text-white);
     text-align: center;
@@ -554,6 +555,6 @@ main section:nth-of-type(5) form button {
     border-radius: 10%;
     background-color: var(--backgroud-color-button-black);
     cursor: pointer;
-    grid-row:5/6;
-    grid-column:1/2;
+margin: 10% 0 0 0;
+    
 }

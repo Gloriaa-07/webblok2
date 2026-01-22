@@ -341,5 +341,10 @@ Bob
   4. [bron 4] (https://www.youtube.com/watch?v=UmzFk68Bwdk)
   5. [bron 5] (https://www.w3schools.com/graphics/svg_stroking.asp)
   6. [bron 6] (https://courses.cs.washington.edu/courses/cse154/17au/styleguide/html-css/spacing-indentation-html.html)
-  7. Sanne & de studentassistenten
+  7. [bron 7] (https://chatgpt.com)
+  8. Sanne & de studentassistenten
+
+ <img src="./readme-images/chat.png" width="375px" alt="1.1">
+  <img src="./readme-images/chat2.png" width="375px" alt="1.1">
+
 </details>

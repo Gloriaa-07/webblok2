@@ -145,22 +145,12 @@ header nav button {
 	text-align: center;
 }
 
-header img {
+header  img {
 	width: 11em;
 	height: 3em;
 	z-index: 1;
 }
 
-/* logo in light en dark mode */
-@media (prefers-color-scheme: dark) {
-header img {
-	width: 11em;
-	height: 3em;
-	z-index: 1;
-	content: url(/images/logowondrtransparentdarkmode.png);
-
-	}
-}
 
 header nav button {
 	z-index: 1;
@@ -561,7 +551,7 @@ footer section:nth-of-type(3) a:hover {
 
 
 
-footer section:nth-of-type(5) nav ul li a:hover {
+footer section:nth-of-type(4) nav ul li a:hover {
 	background-size: 100% .15em;
 	background-position: left bottom;
 }

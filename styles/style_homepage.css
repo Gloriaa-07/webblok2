@@ -78,16 +78,6 @@ main section:nth-of-type(1) > img {
 }
 
 
-/* de div is niet nodig */
-/* section:nth-of-type(1) div{ */
-    /* display: grid; */
-    /* max-width: fit-content; niet nodig */
-    /* max-height: fit-content; niet nodig */
-    /* position: relative; */
-    /* grid-column:1/-1; */
-    /* grid-row:1/2; */
-/* } */
-
 
  /* bij de video hoort er ook een @media (prefers-reduced-motion: no-preference), zodat de video uit gaat als iemand reduce motion aan heeft  */
 /* video gecompressed om het op github te uploaden */
@@ -340,7 +330,7 @@ main section:nth-of-type(3)>a:last-of-type {
     font-family: "chaney-wide";
     display: inline-block;
     text-align: center;
-    grid-row:5/6;
+    grid-row:8/9;
     grid-column:2/3;
 }
 main section:nth-of-type(3)>a:last-of-type:hover{
@@ -370,11 +360,14 @@ main section:nth-of-type(3) {
   display: grid;
   grid-template-rows:
   2em /* 1/2 ruimte boven h2 (voor mezelf) */
-  4em /* 2/3 h2 */
-  9em /* 3/4 p*/
-  8em /* 4/5 p*/
-  3em /* 5/6 a */
-  3em /* 6/7 ruimte onder a */;
+  max-content /* h2 */
+  2em
+  max-content/* p*/
+  3em
+  max-content /* p*/
+  3em /* a */
+  max-content
+  3em /*  ruimte onder a */;
 grid-template-columns: 8% 80% 12%;
 position: relative;
 }
@@ -398,11 +391,11 @@ main section:nth-of-type(3) p {
     font-size: large;
 }
 main section:nth-of-type(3) p:first-of-type{
-    grid-row:3/4;
+    grid-row:4/5;
     grid-column:2/3;
 }
 main section:nth-of-type(3) p:last-of-type{
-    grid-row:4/5;
+    grid-row:6/7;
     grid-column:2/3;
 }
 
@@ -436,21 +429,6 @@ main section:nth-of-type(4) {
     grid-template-columns: 2fr 6fr 2fr;
     position: relative;
 }
-    /* background-color: var(--background-color-main2);
-    display: grid;
-    grid-template-rows: 
-        5em
-        5em
-        5em
-        5em
-        5em
-        5em
-        5em
-        5em
-        5em; 
-    grid-template-columns:2fr 6fr 2fr;
-position: relative; */
-
 
 
 main section:nth-of-type(4) ul{
@@ -499,42 +477,22 @@ main section:nth-of-type(4) p {
 
 
 
-
-
-
-
-
 /**************/
 /* section 5*/
 /**************/
-
-/* 
-main section:nth-of-type(1){
-    background-image: var(--background-img-main);
-    display: grid;
-    hier heb ik een extra rij toegevoegd om de h1 wat te laten uitsteken
-    grid-template-rows: 
-        1fr de video en de h1
-        1em de h1
-        9em wondr 
-        max-content de p
-        5em; witruimte tot volgende section
-    grid-template-columns:calc(40% - 4em) 1fr;
-    position: relative;
-} */
 main section:nth-of-type(5) {
     text-align: center;
     display: grid;
     grid-template-rows: 
-    2em  
-     7em
-      24em 
-      1em
-       1em 
-       5em 
-       4em 
-       2em 
-       15em; 
+    2em  /* 1/2 */
+    max-content /* 2/3 */
+      2em /* 3/4 */
+      max-content/* 4/5 */
+       1em /* 5/6 */
+       max-content /* 6/7 */
+       1em /* 7/8 */
+       max-content /* 8/9 */
+       15em/* 9/10 */; 
  
     grid-template-columns: 15% 70% 15%;
     position: relative;
@@ -551,7 +509,7 @@ main section:nth-of-type(5) p {
     line-height: 160%;
     font-size: large;
 
-       grid-row:3/4;
+       grid-row:4/5;
     grid-column:2/3;
 }
 
@@ -588,17 +546,18 @@ main section:nth-of-type(5)img {
 main section:nth-of-type(5) a {
     background-color: var(--color-text-black);
     border-radius: 20em;
-    padding: 1em 2em 1em 2em;
     color: var(--color-white);
     text-align: center;
-    grid-row:5/6;
+    grid-row:6/7;
     grid-column:2/3;
+    align-content: center;
+    display: grid;
 }
 
 main section:nth-of-type(5) address{
     display: flex;
     flex-direction: column;
-    grid-row:7/8;
+    grid-row:8/9;
     grid-column:2/3;
     justify-self: center;
 }
