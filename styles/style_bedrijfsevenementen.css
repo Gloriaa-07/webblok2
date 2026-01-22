@@ -426,26 +426,26 @@ input:placeholder-shown {
 /* chatgpt */
 /* https://chatgpt.com */
 /* per input het standaard icoon */
-#first-name { --icon-default: url("images/namebadge.png"); }
-#last-name  { --icon-default: url("images/namebadge.png"); }
-#email      { --icon-default: url("images/emailemoji.png"); }
-#phone      { --icon-default: url("images/phoneemoji.png"); }
-#company-name {--icon-default: url("images/companyemoji.png"); }
-#referral {--icon-default: url("images/guestemoji.webp"); }
-#find-us { --icon-default: url("images/findusemoji.webp"); } 
+#first-name { --icon-default: url("../images/namebadge.png"); }
+#last-name  { --icon-default: url("../images/namebadge.png"); }
+#email      { --icon-default: url("../images/emailemoji.png"); }
+#phone      { --icon-default: url("../images/phoneemoji.png"); }
+#company-name {--icon-default: url("../images/companyemoji.png"); }
+#referral {--icon-default: url("../images/guestemoji.webp"); }
+#find-us { --icon-default: url("../images/findusemoji.webp"); } 
 
 /* valid */
 main section:nth-of-type(5)
 input:required:valid:not(:placeholder-shown) {
     border-color: var(--color-valid);
-    background-image: url("images/valid.png");
+    background-image: url("../images/valid.png");
 }
 
 /* invalid */
 main section:nth-of-type(5)
 input:required:invalid:not(:placeholder-shown) {
     border-color: var(--color-invalid);
-    background-image: url("images/invalid.png");
+    background-image: url("../images/invalid.png");
 }
 
 main section:nth-of-type(5) ol {
